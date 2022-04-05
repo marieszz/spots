@@ -1,0 +1,85 @@
+.footer{
+  height: 16vh;
+  margin: 1vh 3vh;
+  .cards-footer {
+    display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    h5{
+      font-weight: bold;
+    }
+    .logo-footer{
+      height: 30vh;
+      img{
+        height: 100%;
+      }
+    }
+    .footer-description{
+      color:white;
+      text-align: justify;
+    }
+    .links{
+      color:white;
+      margin: 0 !important;
+      width: 99%;
+      margin: auto;
+    }
+    .social-medias{
+      color:white;
+      h5{
+        font-weight: bold;
+      }
+      a{
+        text-decoration: none;
+        color:white;
+      }
+      a:hover{
+        color:#83DCB1;
+      }
+    }
+  }
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-footer {
+    grid-template-columns: 1fr;
+    .logo-footer{
+      display:flex;
+      justify-content: center;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-footer {
+    grid-template-columns: 1fr;
+    .logo-footer{
+      display:flex;
+      justify-content: center;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,23 @@
+.main-btn{
+  background: linear-gradient(107.86deg, #FD267A 46%, #FF6036 97.84%);
+  border: 15px solid rgba(248, 194, 194, 0.66);
+  border-radius: 22px;
+  margin: 3rem;
+  div{
+    margin: 1rem 2rem;
+    text-align: center;
+    color: white;
+    .sign-up{
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+      font-size: 44px;
+    }
+    .new-dating{
+      font-size: 44px;
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+    }
+  }
+}

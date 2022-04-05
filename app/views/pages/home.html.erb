@@ -1,4 +1,21 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="logo">
+  <%= image_tag "logo.png", alt:"spots-logo" %>
+</div>
 
-<%= link_to "Commencer", datings_path  %>
+<div class="cards-home">
+  <div class="description-home">
+    <p>Finding the place for your next date has never been easier</p>
+  </div>
+</div>
+
+<DIV class="d-flex cards-home justify-content-end">
+  <div class="main-btn mx-4 my-2">
+    <div>
+      <% unless user_signed_in?  %>
+        <%= link_to "Join us ✨", new_user_session_path, class:"sign-up"%>
+      <% else %>
+        <%= link_to "Start your date right ✨", startdating_path, class:"new-dating" %>
+      <% end %>
+    </div>
+  </div>
+</DIV>
