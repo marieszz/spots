@@ -1,0 +1,12 @@
+<h1>Datings#new</h1>
+<p>Find me in app/views/datings/new.html.erb</p>
+
+<p>Qui est ton date ?</p>
+
+
+
+<%= simple_form_for [@dating, @participant2] do |f|%>
+  <%= f.input :user_id, as: :hidden, input_html: {value: user.id}%>
+  <%= f.input :dating_id, as: :hidden, input_html: {value: @dating.id} %>
+  <%= f.submit "Ajouter", class: "btn btn-primary"%>
+<% end %>
