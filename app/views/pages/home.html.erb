@@ -12,9 +12,9 @@
   <div class="main-btn mx-4 my-2">
     <div>
       <% unless user_signed_in?  %>
-        <%= link_to "Join us ✨", new_user_session_path, class:"sign-up"%>
+        <%= link_to "Join us ✨", startdating_path, class:"sign-up"%>
       <% else %>
-        <%= link_to "Start your date right ✨", startdating_path, class:"new-dating" %>
+        <%= link_to "Start your date right ✨", new_dating_path, class:"new-dating" %>
       <% end %>
     </div>
   </div>
