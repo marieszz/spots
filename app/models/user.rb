@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :datings
   has_many :participants
+  has_one_attached :photo
 end

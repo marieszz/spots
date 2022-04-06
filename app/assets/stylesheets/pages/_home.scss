@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+body {
+  background-color: #FF5C3A;
+  .logo{
+    margin:7vh 10vh;
+    img{
+      width: 60VW;
+    }
+  }
+  .description-home{
+    p{
+      // width: 50VW;
+      font-size:48px;
+      color:white;
+      padding: 1rem 3rem;
+    }
+  }
+}
