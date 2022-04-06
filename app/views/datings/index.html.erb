@@ -1,4 +1,11 @@
-<h1>Datings#index</h1>
-<p>Find me in app/views/datings/index.html.erb</p>
+<h1>Tous tes dates</h1>
 
-<%= link_to "Nouveau date", new_dating_path  %>
+<% @datings.each do |dating| %>
+  <%= dating.user.username %>
+<% end %>
+
+<p>Un nouveau date ?</p>
+
+<%= simple_form_for(@dating) do |f| %>
+  <%= f.submit "Nouveau date", class: "btn btn-primary"%>
+<%end%>
