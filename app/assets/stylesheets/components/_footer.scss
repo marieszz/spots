@@ -25,19 +25,18 @@
       margin: 0 !important;
       width: 99%;
       margin: auto;
+      padding: 32px;
       h5{
-        padding:32px;
+        // padding: 0px 32px;
       }
-      ul{
-        list-style: none;
-        a{
-          text-decoration: none;
-          color: white;
-        }
-        a:hover{
-          color:#83DCB1;
-        }
+      a{
+        text-decoration: none;
+        color: white;
       }
+      a:hover{
+        color:#83DCB1;
+      }
+
     }
     .social-medias{
       color:white;
