@@ -1,14 +1,22 @@
 <%= render 'shared/navbar' %>
-<div class="introduction">
-  <h1>Why a form?</h1>
-  <div class="container">
-    <p>
-      Our form has been well thought. <br>
-      When you and your date have filled it, our tech will suggest you the best places that suit you both. <br>
-      Finding the place you’ll go isn’t a pain anymore and your date can start the best way possible.
-    </p>
+  <div class="introduction">
+    <h1>Why a form?</h1>
+    <div class="container">
+      <p>
+        Our form has been well thought. <br>
+        When you and your date have filled it, our tech will suggest you the best places that suit you both. <br>
+        Finding the place you’ll go isn’t a pain anymore and your date can start the best way possible.
+      </p>
+    </div>
+    <div class="text-center interested">
+      <h3>Interested in making your dates better?</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="dating-new d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+          <%= link_to "Sign up! 🥂", new_user_registration_path %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>Start the form
-  </div>
-</div>
 <%= render 'shared/footer' %>

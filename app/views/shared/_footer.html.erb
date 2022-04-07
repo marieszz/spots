@@ -8,18 +8,32 @@
       notre algorithme te trouve les 5 meilleurs lieux en fonction de tes préférences.</p>
     </div>
     <div class="links">
-      <h5>Sais-en plus</h5>
-        <p>La petite histoire de l'app</p>
-        <p>A propos de nous</p>
-        <p>Contact</p>
+      <h5>Derrière Spoots</h5>
+        <div class="d-flex flex-column">
+          <%= link_to "La petite histoire de l'app", storytime_path %>
+          <%= link_to "A propos de nous", aboutus_path %>
+          <%= link_to "Contact", new_contact_path %>
+        </div>
     </div>
     <div class="social-medias">
-      <h5>On se retrouve ailleurs ?</h5>
-      <a href=""><i class="fa-brands fa-instagram-square"></i></a>
-      <a href=""><i class="fa-brands fa-facebook-square"></i></a>
-      <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-      <h5>Autres</h5>
-      <p>Mentions légales</p>
+      <div class="row">
+        <h5 class="mx-2">On se retrouve ailleurs ?</h5>
+        <div class="d-flex">
+          <%= link_to comingsoon_path do %>
+            <i class="fa-brands fa-instagram-square mx-2"></i>
+          <% end %>
+          <%= link_to comingsoon_path do %>
+            <i class="fa-brands fa-facebook-square  mx-2"></i>
+          <% end %>
+          <%= link_to comingsoon_path do %>
+            <i class="fa-brands fa-twitter-square  mx-2"></i>
+          <% end %>
+        </div>
+      </div>
+      <div class="row my-3">
+        <h5 class="mx-2">Autres</h5>
+        <p class="mx-2">Mentions légales</p>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,19 @@
+<%= render 'shared/navbar' %>
+<div class="content-wrapper">
+  <div class="d-flex justify-content-center">
+    <%= image_tag "logo.png" %>
+  </div>
+  <div class="text-center">
+    <h1>Désolées, ce n'est pas encore prêt !</h1>
+    <h3>Mais reviens vite, on travaille pour que trouver un lieu pour ton date, ça soit encore plus simple !</h3>
+  </div>
+  <div class="buttons-list">
+    <div class="home text-center">
+      <%= link_to "Accueil", root_path %>
+    </div>
+    <div class="new-dating text-center">
+      <%= link_to "Prêt à date?", startdating_path %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>
