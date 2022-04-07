@@ -12,20 +12,36 @@
       height: 30vh;
       img{
         height: 100%;
+        margin-top: 2rem;
       }
     }
     .footer-description{
       color:white;
       text-align: justify;
+      padding:32px;
     }
     .links{
       color:white;
       margin: 0 !important;
       width: 99%;
       margin: auto;
+      h5{
+        padding:32px;
+      }
+      ul{
+        list-style: none;
+        a{
+          text-decoration: none;
+          color: white;
+        }
+        a:hover{
+          color:#83DCB1;
+        }
+      }
     }
     .social-medias{
       color:white;
+      padding:32px;
       h5{
         font-weight: bold;
       }

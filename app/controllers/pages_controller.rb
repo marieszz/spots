@@ -6,4 +6,10 @@ class PagesController < ApplicationController
 
   def startdating
   end
+
+  def storytime
+  end
+
+  def contact
+  end
 end
