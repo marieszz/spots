@@ -13,4 +13,56 @@ body {
     }
 
   }
+  .content-wrapper {
+    min-height: calc(100vh - 70px - 80px);
+  }
+  .new-dating{
+    background: #83dcb1;
+    border: 15px solid rgba(248, 194, 194, 0.66);
+    border-radius: 22px;
+    font-size: 44px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    a{
+      margin: 1rem 2rem;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .new-dating {
+    width: 100%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .new-dating {
+    width: 100%;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .new-dating {
+    width: 100%;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .new-dating {
+    width: 30%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .new-dating {
+    width: 30%;
+  }
 }
