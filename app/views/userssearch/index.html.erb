@@ -1,0 +1,7 @@
+<% if @users.nil? %>
+  <%= "Find it" %>
+<% else %>
+  <% @users.each do |user| %>
+    <%= render partial: "users/index", locals: { player: player } %>
+  <% end %>
+<% end %>

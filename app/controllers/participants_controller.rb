@@ -2,6 +2,7 @@ class ParticipantsController < ApplicationController
   def new
     @dating = Dating.find(params[:dating_id])
     @participant = Participant.new
+    @users = @users.User.where("username ILIKE ?", "%#{params[:query]}%") if params[:query].present?
   end
 
   def create
