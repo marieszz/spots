@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get "/startdating", to: "pages#startdating", as: "startdating"
   get "/storytime", to: "pages#storytime", as: "storytime"
   get "/about-us", to: "pages#aboutus", as: "aboutus"
-  get "/contact", to: "pages#contact", as: "contact"
+  get "/contact-us", to: "pages#contactus", as: "contactus"
   resources :datings, only: [ :index, :new, :create, :show ] do
     resources :participants, only: [ :new, :create ]
   end
+  resources :contacts, only: [ :new, :create ]
 end
