@@ -16,6 +16,5 @@ users_h = [
 
 users_h.each do |user|
   u = User.new(user)
-  u.save
-  u
+  u.save!
 end

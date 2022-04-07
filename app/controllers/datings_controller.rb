@@ -5,6 +5,10 @@ class DatingsController < ApplicationController
     @user = current_user
   end
 
+  def show
+    @participant = Participant.new
+  end
+
   def new
     @dating = Dating.new
   end
