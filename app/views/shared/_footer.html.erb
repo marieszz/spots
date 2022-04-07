@@ -19,9 +19,15 @@
       <div class="row">
         <h5 class="mx-2">On se retrouve ailleurs ?</h5>
         <div class="d-flex">
-          <a href=""><i class="fa-brands fa-instagram-square mx-2"></i></a>
-          <a href=""><i class="fa-brands fa-facebook-square  mx-2"></i></a>
-          <a href=""><i class="fa-brands fa-twitter-square  mx-2"></i></a>
+          <%= link_to comingsoon_path do %>
+            <i class="fa-brands fa-instagram-square mx-2"></i>
+          <% end %>
+          <%= link_to comingsoon_path do %>
+            <i class="fa-brands fa-facebook-square  mx-2"></i>
+          <% end %>
+          <%= link_to comingsoon_path do %>
+            <i class="fa-brands fa-twitter-square  mx-2"></i>
+          <% end %>
         </div>
       </div>
       <div class="row my-3">

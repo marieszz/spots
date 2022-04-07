@@ -15,4 +15,7 @@ class PagesController < ApplicationController
 
   def aboutus
   end
+
+  def comingsoon
+  end
 end
