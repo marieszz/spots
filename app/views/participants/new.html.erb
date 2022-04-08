@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <h2>Qui est ton date ?</h2>
 <div data-controller="live-search">
   <%= form_tag "/users", method: :get do %>
@@ -18,3 +19,4 @@
     <% end %>
   </div>
 <% end %>
+<%= render "shared/footer" %>
