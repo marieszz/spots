@@ -11,6 +11,5 @@ class User < ApplicationRecord
   validates :gender, inclusion: { in: GENDERS }
   validates :username, presence: true
   validates :gender, presence: true
-  validates :email, format: { with: /.*@.*\..*/,
-    message: "Format d'une adresse mail attendu ;)" }
+  validates :email, format: { with: /.*@.*\..*/, message: "Format d'une adresse mail attendu ;)" }
 end

@@ -1,78 +1,56 @@
-.form{
+.users-input{
   display: grid;
   grid-gap: 16px;
-  padding: 3rem 2rem;
-  .form-grid{
-    display: grid;
-    grid-gap: 16px;
-  }
-  .contact-intro{
-    text-align: center;
-  }
-  .email-message{
-    input{
-      height: 30vh;
-    }
+  padding: 0rem 1rem;
+  label{
+    font-size: 14px;
   }
 }
 
+.users-agreement{
+  padding: 0rem 1rem;
+  #user_agreed_to_mails{
 
+  }
+}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .form{
+  .users-input{
     width: 100%;
     grid-template-columns: 1fr;
-    .form-grid {
-      grid-template-columns: 1fr
-    }
   }
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .form{
+@media (min-width: 576px) and (max-width: 767px) {
+  .users-input{
     width: 100%;
     grid-template-columns: 1fr;
-    .form-grid {
-      grid-template-columns: 1fr
-    }
   }
 }
+
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .form{
+  .users-input{
     width: 100%;
     grid-template-columns: 1fr;
-    .form-grid {
-      grid-template-columns: 1fr
-    }
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .form{
+  .users-input{
     width: 100%;
     margin: auto;
     grid-template-columns: 1fr 1fr;
-    // .contact-intro{
-    //   display: flex;
-    //   align-items: center;
-    // }
-    .form-grid {
-      grid-template-columns: 1fr 1fr;
-    }
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .form{
+@media (max-width: 1200px) {
+  .users-input{
     width: 100%;
     margin: auto;
     grid-template-columns: 1fr 1fr;
-    .form-grid {
-      grid-template-columns: 1fr 1fr;
-    }
   }
 }
