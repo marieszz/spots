@@ -9,27 +9,32 @@ users_h = [
   {
     email: "myriam@gmail.com",
     password: "myriam",
-    username: "mymy"
+    username: "mymy",
+    gender: "Féminin",
   },
   {
     email: "marie@gmail.com",
     password: "maries",
-    username: "marieszz"
+    username: "marieszz",
+    gender: "Féminin",
   },
   {
     email: "arthur@gmail.com",
     password: "arthur",
-    username: "arthur"
+    username: "arthur",
+    gender: "Masculin",
   },
   {
     email: "theophane@gmail.com",
     password: "theophane",
-    username: "tek"
+    username: "tek",
+    gender: "Masculin",
   },
   {
     email: "pierre@gmail.com",
     password: "pierre",
-    username: "pierre"
+    username: "pierre",
+    gender: "Non-binaire",
   }
 ]
 
