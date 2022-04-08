@@ -1,0 +1,11 @@
+<h1>Bars#index</h1>
+<p>Find me in app/views/bars/index.html.erb</p>
+
+<% @bars.each do |bar| %>
+  <%= bar.name %>
+<% end %>
+
+<div style="width: 50%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>

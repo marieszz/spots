@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_07_142253) do
+ActiveRecord::Schema.define(version: 2022_04_08_074438) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +49,7 @@ ActiveRecord::Schema.define(version: 2022_04_07_142253) do
     t.string "name"
     t.float "longitude"
     t.float "latitude"
-    t.integer "rating"
+    t.float "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -69,11 +70,11 @@ ActiveRecord::Schema.define(version: 2022_04_07_142253) do
   end
 
   create_table "drinks", force: :cascade do |t|
-    t.string "type"
     t.string "price_range"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "bar_id", null: false
+    t.string "drink"
     t.index ["bar_id"], name: "index_drinks_on_bar_id"
   end
 
