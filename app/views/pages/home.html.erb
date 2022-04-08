@@ -14,7 +14,10 @@
       <% unless user_signed_in?  %>
         <%= link_to "Join us ✨", startdating_path, class:"sign-up"%>
       <% else %>
-        <%= link_to "Start your date right ✨", new_dating_path, class:"new-dating" %>
+        <%#= link_to "Start your date right ✨", new_dating_path, class:"new-dating" %>
+        <%= simple_form_for(@dating) do |f| %>
+          <%= f.submit "Nouveau date"%>
+        <%end%>
       <% end %>
     </div>
   </div>
