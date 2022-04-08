@@ -7,4 +7,9 @@ class User < ApplicationRecord
   has_many :datings
   has_many :participants
   has_one_attached :photo
+  GENDERS = ["Féminin", "Masculin", "Non-binaire", "Gender queer", "Gender fluid"]
+  validates :gender, inclusion: { in: GENDERS }
+  validates :username, presence: true
+  validates :gender, presence: true
+  validates :email, format: { with: /.*@.*\..*/, message: "Format d'une adresse mail attendu ;)" }
 end

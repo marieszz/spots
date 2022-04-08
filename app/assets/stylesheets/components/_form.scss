@@ -66,10 +66,10 @@
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .form{
     width: 100%;
-    margin: auto;
+    // margin: auto;
     grid-template-columns: 1fr 1fr;
     .form-grid {
       grid-template-columns: 1fr 1fr;

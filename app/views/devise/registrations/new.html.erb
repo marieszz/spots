@@ -1,27 +1,57 @@
-<%= render "devise/shared/navbar" %>
+<%= render "shared/navbar" %>
 
-<h2>Sign up</h2>
+<h2>Rejoins Spoots !</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+    <div class="users-input">
+      <div class="">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    placeholder: "lola@gmail.com"%>
+      </div>
+      <div class="">
+        <%= f.input :username,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "username" },
+                    placeholder: "lola_ds, arthur_ab,..."%>
+      </div>
+    </div>
+    <div class="gender-input">
+      <%= f.input :gender,
+                    required: true,
+                    autofocus: true,
+                    as: :select, collection: User::GENDERS%>
+    </div>
+    <div class="users-input">
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+    </div>
+    <div class="d-flex users-agreement">
+      <%= f.check_box :agreed_to_mails %>
+      <%= label_tag(:agreed_to_mails, "Es-tu ok pour recevoir nos premiers questionnaires de satisfaction ?") %>
+    </div>
+    <div class="checkbox-description">
+      <p>Ces questionnaires sont importants pour nous pour améliorer Spoots (plz say yes).</p>
+    </div>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions d-flex justify-content-center">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+  <div class="my-4 col d-flex align-items-center flex-column devise-shared-links">
+    <h6 class="mx-4 row">Déjà inscrit?</h6>
+    <%= render "devise/shared/links", class:"row" %>
+  </div>
+<%= render "shared/footer" %>

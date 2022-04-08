@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <h1>Tous tes dates</h1>
 
 <% @datings.each do |dating| %>
@@ -9,3 +10,4 @@
 <%= simple_form_for(@dating) do |f| %>
   <%= f.submit "Nouveau date", class: "btn btn-primary"%>
 <%end%>
+<%= render "shared/footer" %>
