@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+
   resources :usersearch, only: [:index]
   get "/startdating", to: "pages#startdating", as: "startdating"
+
   resources :datings, only: [ :index, :new, :create, :show ] do
     resources :participants, only: [ :new, :create ]
   end
+
+  resources :bars, only: [ :index ]
 end
