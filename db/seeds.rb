@@ -1,3 +1,5 @@
+p "destroying participants"
+Participant.destroy_all
 p "Destroying dates"
 Dating.destroy_all
 p "Destroying users"
