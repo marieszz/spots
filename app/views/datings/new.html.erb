@@ -1,2 +1,10 @@
 <%= render "shared/navbar" %>
+
+<%= simple_form_for(@dating) do |f| %>
+  <%= f.input :preference, as: :select, collection: Dating::PREFERENCES %>
+  <%= f.input :price_range, as: :select, collection: Dating::PRICE_RANGES %>
+  <%= f.input :arrondissement, as: :select, collection: Dating::ARRONDISSEMENTS %>
+  <%= f.submit %>
+<% end %>
+
 <%= render "shared/footer" %>
