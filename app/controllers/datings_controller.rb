@@ -14,12 +14,20 @@ class DatingsController < ApplicationController
   end
 
   def create
-    @dating = Dating.new(params[:dating])
+    @dating = Dating.new(dating_params)
     @dating.user = current_user
     if @dating.save
+      Participant.create(dating: @dating, user: current_user)
       redirect_to new_dating_participant_path(@dating)
+      Suggestion.create()
     else
       render :index
     end
+  end
+
+  private
+
+  def dating_params
+    params.require(:dating).permit(:user, :preferences, :price_range)
   end
 end
