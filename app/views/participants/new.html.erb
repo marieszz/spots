@@ -13,10 +13,15 @@
 <% if @users.nil? %>
   <%= "Find your date" %>
 <% else %>
-  <div data-target="live-search.results>
+  <div data-target="live-search.results">
     <% @users.each do |user| %>
       <%= render partial: "users/index", locals: { user: user } %>
     <% end %>
   </div>
 <% end %>
+<div>
+  <p>Ton date n'est pas encore inscrit ?</p>
+  <p>Vois directement nos suggestions pour toi ;)</p>
+  <%= link_to "GO", dating_suggestions_path %>
+</div>
 <%= render "shared/footer" %>
