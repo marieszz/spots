@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :datings, only: [ :index, :new, :create, :show ] do
     resources :participants, only: [ :new, :create ]
+    resources :suggestions, only: [ :index ]
   end
 
   resources :bars, only: [ :index ]
@@ -17,6 +18,5 @@ Rails.application.routes.draw do
   get "/comingsoon", to: "pages#comingsoon", as: "comingsoon"
 
   resources :contacts, only: [ :new, :create ]
-  resources :suggestions, only: [ :index ]
 
 end
