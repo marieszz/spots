@@ -21,7 +21,14 @@
   }
   a{
     text-decoration: none;
-    color: white;
+    color: #FD267A;
     font-weight: bold;
+  }
+  a:hover{
+    color:#FF5C3A;
+  }
+  #navbarDropdown{
+    border: 1px white solid;
+    border: 22px;
   }
 }

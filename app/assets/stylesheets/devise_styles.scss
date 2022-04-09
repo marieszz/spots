@@ -1,0 +1,107 @@
+.users-input{
+  display: grid;
+  grid-gap: 16px;
+  padding: 0rem 1rem;
+  label{
+    font-size: 14px;
+  }
+  .form-text {
+    color:white;
+    opacity: 0.8;
+  }
+}
+
+.users-agreement{
+  padding: 0rem 1rem;
+  align-items: center;
+  label{
+    font-size:14px;
+    margin-left:1rem;
+  }
+}
+.checkbox-description{
+  p{
+    font-size: 14px;
+    padding: 0rem 1rem;
+  }
+}
+
+.gender-input{
+  padding: 0rem 1rem;
+  label{
+    font-size:14px;
+  }
+}
+
+.form-actions{
+  input{
+    color:white;
+    border: white 1px solid;
+    border-radius: 22Px;
+  }
+  input:hover{
+    background-color: white;
+    color: #FF5C3A;
+    border: none;
+    border-radius: 22Px;
+  }
+}
+
+.devise-shared-links{
+  a{
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
+  }
+  a:hover{
+    border: white 1px solid;
+    background-color: white;
+    color: #FF5C3A;
+    border-radius: 22Px;
+    padding: 0.5em;
+
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .users-input{
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  .users-input{
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .users-input{
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .users-input{
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+  .users-input{
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}

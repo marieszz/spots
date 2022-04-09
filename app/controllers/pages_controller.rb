@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :startdating ]
+  skip_before_action :authenticate_user!, only: [ :home, :startdating, :storytime, :contact, :aboutus, :comingsoon ]
 
   def home
     @dating = Dating.new
