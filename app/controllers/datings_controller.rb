@@ -20,13 +20,13 @@ class DatingsController < ApplicationController
       Participant.create(dating: @dating, user: current_user)
       price_range = @dating.price_range
       arrondissement = @dating.arrondissement
-      if @dating.preferences == "beer"
+      if @dating.preference == "beer"
         @bars = Bar.where(beer: true, price_range: price_range)
         @bars = @bars.select{ |bar| Geocoder.search([bar.latitude, bar.longitude]).first.postal_code == arrondissement }
-      elsif @dating.preferences == "wine"
+      elsif @dating.preference == "wine"
         @bars = Bar.where(wine: true, price_range: price_range)
         @bars = @bars.select{ |bar| Geocoder.search([bar.latitude, bar.longitude]).first.postal_code == arrondissement }
-      elsif @dating.preferences == "cocktail"
+      elsif @dating.preference == "cocktail"
         @bars = Bar.where(cocktail: true, price_range: price_range)
         @bars = @bars.select{ |bar| Geocoder.search([bar.latitude, bar.longitude]).first.postal_code == arrondissement }
       else
@@ -45,6 +45,6 @@ class DatingsController < ApplicationController
   private
 
   def dating_params
-    params.require(:dating).permit(:user, :preferences, :price_range)
+    params.require(:dating).permit(:user, :preference, :arrondissement, :price_range)
   end
 end
