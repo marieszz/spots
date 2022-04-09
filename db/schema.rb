@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_08_150356) do
->>>>>>> 7435386137e385df0b59614e5094411d576d6cad
+ActiveRecord::Schema.define(version: 2022_04_09_130214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +51,11 @@ ActiveRecord::Schema.define(version: 2022_04_08_150356) do
     t.float "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "beer"
+    t.boolean "wine"
+    t.boolean "cocktail"
+    t.boolean "soft"
+    t.string "price_range"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -67,15 +71,6 @@ ActiveRecord::Schema.define(version: 2022_04_08_150356) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_datings_on_user_id"
-  end
-
-  create_table "drinks", force: :cascade do |t|
-    t.string "price_range"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "bar_id", null: false
-    t.string "drink"
-    t.index ["bar_id"], name: "index_drinks_on_bar_id"
   end
 
   create_table "participants", force: :cascade do |t|
@@ -114,7 +109,6 @@ ActiveRecord::Schema.define(version: 2022_04_08_150356) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "datings", "users"
-  add_foreign_key "drinks", "bars"
   add_foreign_key "participants", "datings"
   add_foreign_key "participants", "users"
   add_foreign_key "suggestions", "bars"

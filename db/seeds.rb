@@ -1,9 +1,12 @@
-p "destroying participants"
+p "Destroying bars"
+Bar.destroy_all
+p "Destroying participants"
 Participant.destroy_all
 p "Destroying dates"
 Dating.destroy_all
 p "Destroying users"
 User.destroy_all
+
 
 users_h = [
   {
@@ -103,78 +106,3 @@ bars = bars_h.each do |bar|
   b = Bar.new(bar)
   b.save!
 end
-
-bisou = bars[0]
-syndicat = bars[1]
-billili = bars[2]
-combat = bars[3]
-l_avant = bars[4]
-cravan = bars[5]
-lulu = bars[6]
-septime = bars[7]
-mezca = bars[8]
-danico = bars[9]
-
-p "bars created"
-
-# Creating drinks
-
-# cocktails_h = [
-#   {
-#     drink: "Cocktails",
-#     price_range: "8-12",
-#     bar: bisou
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: "8-12",
-#     bar: syndicat
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: "8-12",
-#     bar: billili
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: "8-12",
-#     bar: combat
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: ">12",
-#     bar: l_avant
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: "8-12",
-#     bar: cravan
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: "8-12",
-#     bar: lulu
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: ">12",
-#     bar: septime
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: "8-12",
-#     bar: mezca
-#   },
-#   {
-#     drink: "Cocktails",
-#     price_range: ">12",
-#     bar: danico
-#   }
-# ]
-
-# cocktails_h.each do |cocktail|
-#   c = Drink.new(cocktail)
-#   c.save!
-# end
-
-# p "Cocktails created"
