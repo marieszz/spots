@@ -53,52 +53,92 @@ bars_h = [
   {
     address: "15 Bd du Temple, 75003 Paris",
     name: "Bisou.",
-    rating: 4.5
+    rating: 4.5,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "51 rue Faubourg St Denis, 75010 Paris",
     name: "Le Syndicat",
-    rating: 4.5
+    rating: 4.5,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "136 Rue du Faubourg Poissonnière, 75010 Paris",
     name: "Billili",
-    rating: 4.7
+    rating: 4.7,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "63 Rue de Belleville, 75019 Paris",
     name: "Combat",
-    rating: 4.6
+    rating: 4.6,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "14 Rue Lobineau, 75006 Paris",
     name: "L'avant-comptoir du Marché'",
-    rating: 4.5
+    rating: 4.5,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "17 Rue Jean de la Fontaine, 75016 Paris",
     name: "Cravan",
-    rating: 4.4
+    rating: 4.4,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "12 Rue Frochot, 75009 Paris",
     name: "Lulu White",
-    rating: 4.7
+    rating: 4.7,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "3 Rue Basfroi, 75011 Paris",
     name: "Septime la Cave",
-    rating: 4.6
+    rating: 4.6,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "13 Bd du Temple, 75003 Paris",
     name: "La Mezcaleria",
-    rating: 4.1
+    rating: 4.1,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
   {
     address: "6 Rue Vivienne, 75002 Paris",
     name: "Danico",
-    rating: 4.6
+    rating: 4.6,
+    beer: true,
+    wine: true,
+    cocktail: true,
+    price_range: "€€"
   },
 ]
 
