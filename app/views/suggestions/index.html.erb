@@ -1,2 +1,13 @@
 <%= render "shared/navbar" %>
+
+
+  <% @bars.each do |bar| %>
+    <%= bar.name %>
+  <% end %>
+
+  <div style="width: 50%; height: 600px;"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 <%= render "shared/footer" %>
