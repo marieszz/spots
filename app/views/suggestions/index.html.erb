@@ -1,8 +1,8 @@
 <%= render "shared/navbar" %>
 
 
-  <% @bars.each do |bar| %>
-    <%= bar.name %>
+  <% @suggestions.each do |suggestion| %>
+    <%= suggestion.bar.name %>
   <% end %>
 
   <div style="width: 50%; height: 600px;"
