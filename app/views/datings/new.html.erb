@@ -1,10 +1,16 @@
 <%= render "shared/navbar" %>
-
-<%= simple_form_for(@dating) do |f| %>
-  <%= f.input :preference, as: :select, collection: Dating::PREFERENCES %>
-  <%= f.input :price_range, as: :select, collection: Dating::PRICE_RANGES %>
-  <%= f.input :arrondissement, as: :select, collection: Dating::ARRONDISSEMENTS %>
-  <%= f.submit %>
-<% end %>
+<h1 class="text-center" style="font-weight:700">Comment tu l'imagines, ton date ?</h1>
+<div class="new-form-dating">
+  <%= simple_form_for(@dating) do |f| %>
+    <div class="d-flex justify-content-center flex-column">
+      <%= f.input :preference, as: :select, collection: Dating::PREFERENCES, label:"Tu es plus dans un mood..." %>
+      <%= f.input :price_range, as: :select, collection: Dating::PRICE_RANGES, label:"Ton porte-monnaie est dans quel mood ?" %>
+      <%= f.input :arrondissement, as: :select, collection: Dating::ARRONDISSEMENTS, label:"Ton arrondissement de prédiléction ?" %>
+    </div>
+    <div class="d-flex justify-content-end">
+      <%= f.button :submit, "Suivant 👉", class:"send-email"  %>
+    </div>
+  <% end %>
+</div>
 
 <%= render "shared/footer" %>
