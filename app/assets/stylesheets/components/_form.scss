@@ -27,7 +27,6 @@
     }
   }
 }
-
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .form{
@@ -74,5 +73,57 @@
     .form-grid {
       grid-template-columns: 1fr 1fr;
     }
+  }
+}
+
+// Datings/new
+
+.new-form-dating{
+  margin: auto;
+  .form-label {
+    text-align: center;
+  }
+}
+
+.invalid-feedback{
+  background-color: white;
+  color: #FF5C39;
+  width: auto;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .new-form-dating{
+    width: 95%;
+
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .new-form-dating{
+    width: 95%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .new-form-dating{
+    width: 80%;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .new-form-dating{
+    width: 70%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+// Large devices (desktops, 992px and up)
+@media (min-width: 1200px) {
+  .new-form-dating{
+    width: 70%;
   }
 }
