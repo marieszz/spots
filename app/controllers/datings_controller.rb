@@ -20,19 +20,20 @@ class DatingsController < ApplicationController
       Participant.create(dating: @dating, user: current_user)
       price_range = @dating.price_range
       arrondissement = @dating.arrondissement
-      if @dating.preference == "beer"
+      if @dating.preference == "Bière"
         @bars = Bar.where(beer: true, price_range: price_range)
         @bars = @bars.select{ |bar| Geocoder.search([bar.latitude, bar.longitude]).first.postal_code == arrondissement }
-      elsif @dating.preference == "wine"
+      elsif @dating.preference == "Vin"
         @bars = Bar.where(wine: true, price_range: price_range)
         @bars = @bars.select{ |bar| Geocoder.search([bar.latitude, bar.longitude]).first.postal_code == arrondissement }
-      elsif @dating.preference == "cocktail"
+      elsif @dating.preference == "Cocktail"
         @bars = Bar.where(cocktail: true, price_range: price_range)
         @bars = @bars.select{ |bar| Geocoder.search([bar.latitude, bar.longitude]).first.postal_code == arrondissement }
       else
         @bars = Bar.where(soft: true, price_range: price_range)
         @bars = @bars.select{ |bar| Geocoder.search([bar.latitude, bar.longitude]).first.postal_code == arrondissement }
       end
+      raise
       @bars.each do |bar|
         Suggestion.new(bar: bar, dating: @dating)
         Suggestion.save!
