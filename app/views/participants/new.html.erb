@@ -10,10 +10,16 @@
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
+<div class="d-flex align-items-center flex-column">
+  <p class="text-center">Ton date n'est pas encore inscrit ? Vois directement nos suggestions pour toi ;)</p>
+  <div class="d-flex flex-row see-suggestions">
+    <%= link_to "Allons voir", dating_suggestions_path %>
+  </div>
+</div>
 <% if @users.nil? %>
   <%= "Find your date" %>
 <% else %>
-  <div data-target="live-search.results>
+  <div data-target="live-search.results">
     <% @users.each do |user| %>
       <%= render partial: "users/index", locals: { user: user } %>
     <% end %>

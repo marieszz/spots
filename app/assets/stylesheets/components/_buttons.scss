@@ -34,5 +34,22 @@
   .send-email:hover{
     opacity: 0.7;
   }
+}
 
+.see-suggestions{
+  border: 5px solid rgba(248, 194, 194, 0.66);
+  border-radius: 22Px;
+  background: #83dcb1;
+
+  &:hover{
+    background-color:white;
+    color: #FF5B3A;
+    border-radius: 22Px;
+  }
+  a{
+    color: #FF5B3A;
+    text-align: center;
+    padding:0.25rem 0.1rem;
+    text-decoration: none;
+  }
 }

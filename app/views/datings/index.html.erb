@@ -6,8 +6,7 @@
 <% end %>
 
 <p>Un nouveau date ?</p>
-
-<%= simple_form_for(@dating) do |f| %>
-  <%= f.submit "Nouveau date", class: "btn btn-primary"%>
-<%end%>
+<div class="see-suggestions">
+  <%= link_to "Commence le ici", new_dating_path, class:"" %>
+</div>
 <%= render "shared/footer" %>
