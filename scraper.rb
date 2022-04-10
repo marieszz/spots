@@ -47,3 +47,4 @@ require 'CSV'
     puts "infos"
     puts infos
   end
+#test
