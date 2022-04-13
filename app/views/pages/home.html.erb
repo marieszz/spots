@@ -7,16 +7,16 @@
     <p>Spoots a été fait pour toi, pour vous, pour nous. <br> Pour ne plus galérer à trouver un bar sympa pour un premier date,
       notre algorithme te trouve les 5 meilleurs lieux en fonction de tes préférences.</p>
   </div>
-</div>
-
-<DIV class="d-flex cards-home justify-content-end">
-  <div class="main-btn mx-4 my-2">
-    <div>
-      <% unless user_signed_in?  %>
-        <%= link_to "Join us ✨", startdating_path, class:"sign-up"%>
-      <% else %>
-        <%= link_to "Start your date right ✨", new_dating_path, class:"new-dating" %>
-      <% end %>
+  <DIV class="d-flex cards-home justify-content-end">
+    <div class="main-btn d-flex justify-content-center align-items-center">
+      <div>
+        <% unless user_signed_in?  %>
+          <%= link_to "Join us ✨", startdating_path, class:"sign-up"%>
+        <% else %>
+          <%= link_to "Start your date right ✨", new_dating_path, class:"new-dating" %>
+        <% end %>
+      </div>
     </div>
-  </div>
 </DIV>
+
+</div>

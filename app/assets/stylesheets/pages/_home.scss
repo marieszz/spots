@@ -8,11 +8,14 @@ body {
     }
   }
   .description-home{
+    display: flex;
+    align-items: center;
+    margin: 0rem 1rem;
     p{
       // width: 50VW;
       // font-size:48px;
       color:white;
-      padding: 1rem 3rem;
+      text-align: justify;
     }
   }
 }
@@ -37,21 +40,21 @@ body {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards-footer {
+  .cards-home {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .cards-footer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .cards-home {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .cards-footer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .cards-home {
+    grid-template-columns: 1fr 1fr;
   }
 }
