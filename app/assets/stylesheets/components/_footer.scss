@@ -8,25 +8,17 @@
     h5{
       font-weight: bold;
     }
-    .logo-footer{
-      height: 30vh;
-      img{
-        height: 70%;
-        margin-top: 2rem;
-      }
-    }
     .footer-description{
       color:white;
       text-align: justify;
-      padding:32px;
-      font-size:14px;
+      // font-size:14px;
     }
     .links{
       color:white;
       margin: 0 !important;
       width: 99%;
       margin: auto;
-      padding: 32px;
+      // padding: 32px;
       a{
         text-decoration: none;
         color: white;
@@ -38,7 +30,6 @@
     }
     .social-medias{
       color:white;
-      padding:32px;
       h5{
         font-weight: bold;
       }
@@ -56,22 +47,54 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
+  h5{
+    font-size: 16px;
+  }
   .cards-footer {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    font-size: 16px;
     .logo-footer{
       display:flex;
       justify-content: center;
+      height: 15vh;
+      img{
+        height: 50%;
+        margin-top: 2rem;
+      }
+    }
+    .footer-description{
+      padding: 32px;
+    }
+
+    .links, .social-medias{
+      padding: none;
     }
   }
 }
 
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards-footer {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    font-size: 16px;
+    h5{
+      font-size: 16px;
+    }
     .logo-footer{
       display:flex;
       justify-content: center;
+      height: 15vh;
+      img{
+        height: 50%;
+        margin-top: 2rem;
+      }
+    }
+    .footer-description{
+      padding: 32px;
+    }
+    .links, .social-medias{
+      padding: none;
     }
   }
 }
@@ -80,6 +103,26 @@
 @media (min-width: 768px) {
   .cards-footer {
     grid-template-columns: 1fr 1fr;
+    font-size: 16px;
+    h5{
+      font-size: 16px;
+    }
+    .logo-footer{
+      display:flex;
+      justify-content: center;
+      height: 15vh;
+      img{
+        height: 50%;
+        margin-top: 2rem;
+      }
+    }
+    .footer-description{
+      margin-top: 3rem
+    }
+
+    .links, .social-medias{
+      padding: none;
+    }
   }
 }
 
@@ -87,6 +130,10 @@
 @media (min-width: 992px) {
   .cards-footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 20px;
+    h5{
+      font-size: 20px;
+    }
   }
 }
 
@@ -94,5 +141,9 @@
 @media (min-width: 1200px) {
   .cards-footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 20px;
+    h5{
+      font-size: 20px;
+    }
   }
 }

@@ -10,9 +10,48 @@ body {
   .description-home{
     p{
       // width: 50VW;
-      font-size:48px;
+      // font-size:48px;
       color:white;
       padding: 1rem 3rem;
     }
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .description-home{
+    p{
+      font-size:24px;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .description-home{
+    p{
+      font-size:24px;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
