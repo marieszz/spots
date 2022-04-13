@@ -131,8 +131,13 @@
   .cards-footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     font-size: 20px;
+    margin-top: 4rem;
     h5{
       font-size: 20px;
+    }
+    .footer-description{
+      margin-top: none;
+      padding: 0Px 32px
     }
   }
 }
