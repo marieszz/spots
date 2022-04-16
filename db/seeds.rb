@@ -95,7 +95,7 @@ bars_h = [
   },
   {
     address: "14 Rue Lobineau, 75006 Paris",
-    name: "L'avant-comptoir du Marché'",
+    name: "L'avant-comptoir du Marché",
     rating: 4.5,
     beer: true,
     wine: true,
