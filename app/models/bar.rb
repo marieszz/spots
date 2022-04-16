@@ -3,6 +3,8 @@ class Bar < ApplicationRecord
   has_many :drinks
   has_many :dating, through: :suggestions
 
+  has_one_attached :photo
+
   validates :address, :name, presence: true
   validates :rating, inclusion: { in: 0.0..5.0 }
 

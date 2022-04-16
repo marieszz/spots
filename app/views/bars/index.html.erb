@@ -3,6 +3,8 @@
 
 <% @bars.each do |bar| %>
   <%= bar.name %>
+  <%= cl_image_tag bar.photo.key, height: 300, width: 400, crop: :fill %>
+
 <% end %>
 
 <div style="width: 50%; height: 600px;"

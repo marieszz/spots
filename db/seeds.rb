@@ -1,3 +1,7 @@
+require "open-uri"
+
+p "Destroying suggestions"
+Suggestion.destroy_all
 p "Destroying bars"
 Bar.destroy_all
 p "Destroying participants"
@@ -12,31 +16,31 @@ users_h = [
     email: "myriam@gmail.com",
     password: "myriam",
     username: "mymy",
-    gender: "Féminin",
+    gender: "Féminin"
   },
   {
     email: "marie@gmail.com",
     password: "maries",
     username: "marieszz",
-    gender: "Féminin",
+    gender: "Féminin"
   },
   {
     email: "arthur@gmail.com",
     password: "arthur",
     username: "arthur",
-    gender: "Masculin",
+    gender: "Masculin"
   },
   {
     email: "theophane@gmail.com",
     password: "theophane",
     username: "tek",
-    gender: "Masculin",
+    gender: "Masculin"
   },
   {
     email: "pierre@gmail.com",
     password: "pierre",
     username: "pierre",
-    gender: "Non-binaire",
+    gender: "Non-binaire"
   }
 ]
 
@@ -151,7 +155,19 @@ bars_h = [
   },
 ]
 
-bars = bars_h.each do |bar|
-  b = Bar.new(bar)
+bars = bars_h.map.with_index do |bar, index|
+  photo = URI.open(bar[:photo])
+
+  b = Bar.new(address: bar[:address],
+              name: bar[:name],
+              rating: bar[:rating],
+              beer: bar[:beer],
+              wine: bar[:wine],
+              cocktail: bar[:cocktail],
+              price_range: bar[:price_range])
+  b.photo.attach(io: photo, filename: "bar#{index}.png", content_type: "image/png")
   b.save!
+  b
 end
+
+p "bars created"
