@@ -1,6 +1,16 @@
 <%= render "shared/navbar" %>
 <h2>Qui est ton date ?</h2>
+
 <div data-controller="live-search">
+  <%= form_tag users_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Indique le pseudo de ton date"
+    %>
+    <%= submit_tag "Chercher", class: "btn btn-primary" %>
+  <% end %>
+
   <%= form_tag "/users", method: :get do %>
     <%= text_field_tag :query,
       params[:query],
@@ -16,13 +26,5 @@
     <%= link_to "Allons voir", dating_suggestions_path %>
   </div>
 </div>
-<% if @users.nil? %>
-  <%= "Find your date" %>
-<% else %>
-  <div data-target="live-search.results">
-    <% @users.each do |user| %>
-      <%= render partial: "users/index", locals: { user: user } %>
-    <% end %>
-  </div>
-<% end %>
+
 <%= render "shared/footer" %>

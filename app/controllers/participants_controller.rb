@@ -2,7 +2,13 @@ class ParticipantsController < ApplicationController
   def new
     @dating = Dating.find(params[:dating_id])
     @participant = Participant.new
-    @users = @users.User.where("username ILIKE ?", "%#{params[:query]}%") if params[:query].present?
+    if params[:query].present?
+      sql_query = " \
+        users.username ILIKE :query \
+        OR users.email ILIKE :query \
+      "
+      @users = User.where(sql_query, query: "%#{params[:query]}%")
+    end
     @suggestions = @dating.suggestions
   end
 
@@ -11,9 +17,9 @@ class ParticipantsController < ApplicationController
     @participant = Participant.new(participant_params)
     @participant.dating = @dating
     if @participant.save
-      redirect_to new_dating_participant_path(@dating)
+      redirect_to dating_suggestions_path(@dating)
     else
-      render "datings/new"
+      render new_dating_participant_path(@dating)
     end
   end
 
