@@ -1,14 +1,27 @@
 <%= render "shared/navbar" %>
 
+  <% if @suggestions.empty? %>
+    <div>
+      <p>Désolées, nous n'avons rien à te proposer...</p>
+      <p>Tu peux soit compléter le formulaire à nouveau <%= link_to "ici", new_dating_path %></p>
+      <p>ou nous faire tes recommandations ici</p>
+    </div>
+  <% else %>
+    <% @suggestions.each do |suggestion| %>
+      <%= suggestion.bar.name %>
+    <% end %>
+    <div style="width: 50%; height: 600px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 
   <% @suggestions.each do |suggestion| %>
     <%= suggestion.bar.name %>
     <%#= cl_image_tag suggestion.bar.photo.key, height: 300, width: 400, crop: :fill %>
+
+
   <% end %>
 
-  <div style="width: 50%; height: 600px;"
-    data-controller="mapbox"
-    data-mapbox-markers-value="<%= @markers.to_json %>"
-    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 <%= render "shared/footer" %>

@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :usersearch, only: [:index]
   resources :users, only: [ :index ]
 
+  get "/startdating", to: "pages#startdating", as: "startdating"
+
+
   resources :datings, only: [ :index, :new, :create, :show ] do
     resources :participants, only: [ :new, :create ]
     resources :suggestions, only: [ :index ]

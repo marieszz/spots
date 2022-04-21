@@ -1,12 +1,16 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-8">
 
-      <div id="users">
-        <% @users.each do |user| %>
-          <h4>@<%= user.username %></h4>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render "shared/navbar" %>
+<% if @users.nil? %>
+  <%= "Find it" %>
+<% else %>
+  <% @users.each do |user| %>
+    <%= user.username %>
+    <%= simple_form_for [@dating, @new_participant] do |f|%>
+      <%= f.input :user_id, as: :hidden, input_html: {value: user.id}%>
+      <%= f.input :datng_id, as: :hidden, input_html: {value: @dating.id} %>
+      <%= button_tag type: 'submit' %>
+    <% end %>
+  <% end %>
+<% end %>
+<%= render "shared/footer" %>
+

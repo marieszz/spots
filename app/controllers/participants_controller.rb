@@ -26,6 +26,6 @@ class ParticipantsController < ApplicationController
   private
 
   def participant_params
-    params.require(:participant).permits(:user_id, :dating_id)
+    params.require(:participant).permit(:user_id, :dating_id)
   end
 end
