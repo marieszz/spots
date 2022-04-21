@@ -1,0 +1,44 @@
+.bar {
+  display: flex;
+  background: white;
+  color: black;
+  margin: 0.5rem;
+  height: 120px;
+  border-radius: 4px;
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+.bar-drinks {
+  display: flex;
+  justify-content: end;
+}
+
+.bar-infos-left {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+
+  p {
+    font-size: 0.75em;
+    font-style: italic;
+    margin-bottom: none;
+  }
+}
+
+.bar-infos-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5em 0.5em 0;
+}
