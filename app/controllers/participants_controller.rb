@@ -11,15 +11,15 @@ class ParticipantsController < ApplicationController
     @participant = Participant.new(participant_params)
     @participant.dating = @dating
     if @participant.save
-      redirect_to new_dating_participant_path(@dating)
+      redirect_to dating_suggestions_path
     else
-      render "datings/new"
+      render new_dating_participant_path(@dating)
     end
   end
 
   private
 
   def participant_params
-    params.require(:participant).permits(:user_id, :dating_id)
+    params.require(:participant).permit(:user_id, :dating_id)
   end
 end
