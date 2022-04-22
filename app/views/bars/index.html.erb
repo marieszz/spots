@@ -3,41 +3,45 @@
   <h3>Sélectionnés par Spots, pour vos dates</h3>
 
   <div class="map">
-    <div style="width: 95%; height: 400px;"
+    <div style="width: 90%; height: 400px;"
       data-controller="mapbox"
       data-mapbox-markers-value="<%= @markers.to_json%>"
       data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 
-  <% @bars.each do |bar| %>
-    <div class="bar">
-      <div class="bar-photo">
-        <%= cl_image_tag bar.photo.key, crop: :fill %>
-      </div>
-      <div class="bar-infos-left">
-        <h3><%= bar.name %></h3>
-        <p><%= bar.address %></p>
-      </div>
-      <div class="bar-infos-right">
-        <p><%= bar.rating %> ⭐️</p>
-
-        <div class="bar-drinks">
-          <% if bar.beer == true %>
-            <p>🍻</p>
-          <% end %>
-          <% if bar.wine == true %>
-            <p>🍷</p>
-          <% end %>
-          <% if bar.cocktail == true %>
-            <p>🍹</p>
-          <% end %>
-          <% if bar.soft == true %>
-            <p>🧃</p>
-          <% end %>
+  <div class="bars">
+    <% @bars.each do |bar| %>
+      <div class="bar">
+        <div class="bar-photo">
+          <%= cl_image_tag bar.photo.key, crop: :fill %>
+        </div>
+        <div class="bar-infos">
+          <div class="bar-infos-top">
+            <h3><%= bar.name %></h3>
+            <p><%= bar.rating %> ⭐️</p>
+          </div>
+          <div class="bar-address">
+            <p><%= bar.address %></p>
+          </div>
+          <div class="bar-infos-bottom">
+            <div class="bar-drinks">
+              <% if bar.beer == true %>
+                <p>🍻</p>
+              <% end %>
+              <% if bar.wine == true %>
+                <p>🍷</p>
+              <% end %>
+              <% if bar.cocktail == true %>
+                <p>🍹</p>
+              <% end %>
+              <% if bar.soft == true %>
+                <p>🧃</p>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
-
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
