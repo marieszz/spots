@@ -1,13 +1,22 @@
 <% if @users.nil? %>
   <%= "Find it" %>
 <% else %>
-  <% @users.each do |user| %>
-    <%= user.username %>
-    <%= simple_form_for [@dating, @new_participant] do |f|%>
-      <%= f.input :user_id, as: :hidden, input_html: {value: user.id}%>
-      <%= f.input :datng_id, as: :hidden, input_html: {value: @dating.id} %>
-      <%= button_tag type: 'submit' %>
+  <div class="text-center">
+    <h3>Invite ton date</h3>
+    <h4>En appuyant sur 🤍</h4>
+  </div>
+  <div class="container">
+    <% @users.each do |user| %>
+      <%= user.username.capitalize %>
+      <div class="d-flex users-lists">
+        <%= simple_form_for [@dating, @new_participant] do |f| %>
+          <%= f.input :user_id, as: :hidden, input_html: {value: user.id}%>
+          <%= f.input :datng_id, as: :hidden, input_html: {value: @dating.id} %>
+          <%= "Tu l'invites?" %>
+          <%= submit_tag "🤍", class:"btn-add-date" %>
+        <% end %>
+      </div>
     <% end %>
-  <% end %>
+  </div>
 <% end %>
 <%= render "shared/footer" %>
