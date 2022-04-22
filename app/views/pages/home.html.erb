@@ -1,22 +1,25 @@
-<div class="logo">
-  <%= image_tag "logo.png", alt:"spots-logo" %>
-</div>
-
-<div class="cards-home">
-  <div class="description-home">
-    <p>Spoots a été fait pour toi, pour vous, pour nous. <br> Pour ne plus galérer à trouver un bar sympa pour un premier date,
-      notre algorithme te trouve les 5 meilleurs lieux en fonction de tes préférences.</p>
+<div class=" container homepage">
+  <div class="logo">
+    <%#= image_tag "logo.png", alt:"spots-logo" %>
   </div>
-  <DIV class="d-flex cards-home justify-content-end">
-    <div class="main-btn d-flex justify-content-center align-items-center">
-      <div>
-        <% unless user_signed_in?  %>
-          <%= link_to "Rejoins-nous ! ✨", startdating_path, class:"sign-up"%>
-        <% else %>
-          <%= link_to "Trouve ton Spot ! ✨", new_dating_path, class:"new-dating" %>
-        <% end %>
+  <h1>Spoots</h1>
+
+  <div class="cards-home">
+    <div class="description-home">
+      <p>Spoots a été fait pour toi, pour vous, pour nous.</p>
+      <p>Pour ne plus galérer à trouver un bar sympa pour un premier date 🤯</p>
+      <p>Notre algorithme te trouve les <strong>5 meilleurs lieux</strong> en fonction de tes préférences à toi et à ton date !</p>
+    </div>
+    <div class="d-flex cards-home justify-content-end">
+      <div class="main-btn">
+        <div>
+          <% unless user_signed_in?  %>
+            <%= link_to "Rejoins-nous ! ✨", startdating_path, class:"sign-up"%>
+          <% else %>
+            <%= link_to "Trouve ton Spot ! ✨", new_dating_path, class:"new-dating" %>
+          <% end %>
+        </div>
       </div>
     </div>
-</DIV>
-
+  </div>
 </div>

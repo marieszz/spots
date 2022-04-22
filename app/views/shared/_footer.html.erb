@@ -1,38 +1,37 @@
 <div class="footer">
-  <div class="cards-footer">
+  <div class="footer-top">
     <div class="logo-footer">
-      <%= image_tag "logolarge.png" %>
+      <%= image_tag "spots-logo-big.png" %>
     </div>
-    <div class="footer-description">
-      <p>Spots, pour toi, pour vous, pour nous.</p>
-    </div>
-    <div class="links">
+    <p>Spots, pour toi, pour vous, pour nous.</p>
+  </div>
+  <div class="footer-description">
+    <div>
       <h5>Derrière Spoots</h5>
-        <div class="d-flex flex-column">
-          <%= link_to "La petite histoire de l'app", storytime_path %>
-          <%= link_to "A propos de nous", aboutus_path %>
-          <%= link_to "Contact", new_contact_path %>
-        </div>
     </div>
+    <div class="d-flex flex-column">
+      <%= link_to "La petite histoire de l'app", storytime_path %>
+      <%= link_to "A propos de nous", aboutus_path %>
+      <%= link_to "Contact", new_contact_path %>
+    </div>
+  </div>
+  <div class="footer-bottom">
     <div class="social-medias">
-      <div class="row">
-        <h5>On se retrouve ailleurs ?</h5>
-        <div class="d-flex">
-          <%= link_to comingsoon_path do %>
-            <i class="fa-brands fa-instagram-square mx-2"></i>
-          <% end %>
-          <%= link_to comingsoon_path do %>
-            <i class="fa-brands fa-facebook-square  mx-2"></i>
-          <% end %>
-          <%= link_to comingsoon_path do %>
-            <i class="fa-brands fa-twitter-square  mx-2"></i>
-          <% end %>
-        </div>
+      <h5>On se retrouve ailleurs ?</h5>
+      <div class="">
+        <%= link_to comingsoon_path do %>
+          <i class="fa-brands fa-instagram-square mx-2"></i>
+        <% end %>
+        <%= link_to comingsoon_path do %>
+          <i class="fa-brands fa-facebook-square  mx-2"></i>
+        <% end %>
+        <%= link_to comingsoon_path do %>
+          <i class="fa-brands fa-twitter-square  mx-2"></i>
+        <% end %>
       </div>
-      <div class="row my-3">
-        <h5>Autres</h5>
-        <%= link_to "Mentions légales", comingsoon_path %>
-      </div>
+    </div>
+    <div class="others">
+      <p>Spots | Tous droits réservés | <%= link_to "Mentions légales", comingsoon_path %></p>
     </div>
   </div>
 </div>
