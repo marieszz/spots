@@ -37,21 +37,24 @@
 }
 
 .see-suggestions{
-  border: 5px solid rgba(248, 194, 194, 0.66);
+  border: 5px solid #192637;
   border-radius: 22Px;
   background: #FF5B3A;
+  color: white;
 
   &:hover{
     background-color:white;
-    color: #FF5B3A;
     border-radius: 22Px;
+    border: 5px solid #FF5B3A;
   }
   a{
     color: white;
-    background-color: #FF5B3A;
     text-align: center;
     padding:0.25rem 0.1rem;
     text-decoration: none;
+    &:hover{
+      color: #FF5B3A;
+    }
   }
 }
 
