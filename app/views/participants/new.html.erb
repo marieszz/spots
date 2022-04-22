@@ -1,30 +1,30 @@
-<%= render "shared/navbar" %>
-<h2>Qui est ton date ?</h2>
 
-<div data-controller="live-search">
-  <%= form_tag users_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Indique le pseudo de ton date"
-    %>
-    <%= submit_tag "Chercher", class: "btn btn-primary" %>
-  <% end %>
+<div class="row">
+    <div class="col d-flex justify-content-center">
+      <div class="d-flex justify-content-center">
+        <%= image_tag "photo_find_date.jpeg", class:"img-search-date"%>
+      </div>
+    </div>
+    <div class="col d-flex flex-column">
+      <h2 class="text-center">Qui est ton date ?</h2>
+      <div data-controller="live-search" class="search-bar">
+        <%= form_tag users_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Indique le pseudo de ton date"
+          %>
+          <div class="d-flex justify-content-center">
+            <%= submit_tag "Trouve-le !", class: "btn btn-search-bar" %>
+          </div>
+        <% end %>
 
-  <%= form_tag "/users", method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find your date"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+      </div>
+      <div class="d-flex align-items-center flex-column" style="margin-top:10vh">
+        <p class="text-center">Ton date n'est pas encore inscrit ? Vois directement nos suggestions pour toi ;)</p>
+        <div class="d-flex flex-row see-suggestions">
+          <%= link_to "Allons voir", dating_suggestions_path %>
+        </div>
+      </div>
+    </div>
 </div>
-<div class="d-flex align-items-center flex-column">
-  <p class="text-center">Ton date n'est pas encore inscrit ? Vois directement nos suggestions pour toi ;)</p>
-  <div class="d-flex flex-row see-suggestions">
-    <%= link_to "Allons voir", dating_suggestions_path %>
-  </div>
-</div>
-
-<%= render "shared/footer" %>
