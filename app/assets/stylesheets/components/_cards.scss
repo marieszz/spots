@@ -73,10 +73,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
+  margin-top: 3vh;
   .user-card{
-    background-color: #FFFFFF;
+    background-color: #DAE3E5;
     border-radius: 22px;
-    color: #ff5b3a;
+    color: #507DBC;
     text-align: center;
   }
 }

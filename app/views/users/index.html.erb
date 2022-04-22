@@ -7,22 +7,28 @@
   </div>
   <div class="container user-cards">
     <% @users.each do |user| %>
+    <div class="container">
       <div class="row user-card">
-        <div class="col">
-          <img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" alt="">
+        <div class="col p-0">
+          <img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" alt="" style="border-radius:22px 0px 0px 22px; width:100%; padding:none">
         </div>
-        <div class="col">
-        <%= user.username.capitalize %>
+        <div class="col d-flex justify-content-center flex-column">
+        <div style="font-weight:bold">
+          <%= user.username.capitalize %>
+        </div>
           <div class="d-flex users-lists text-center justify-content-center">
             <%= simple_form_for [@dating, @new_participant] do |f| %>
               <%= f.input :user_id, as: :hidden, input_html: {value: user.id}%>
               <%= f.input :datng_id, as: :hidden, input_html: {value: @dating.id} %>
-              <p class="text-center">Tu l'invites?</p>
-              <%= submit_tag "🤍", class:"btn-add-date" %>
+              <div class="d-flex">
+                <p class="text-center mb-0">Tu l'invites?</p>
+                <%= submit_tag "🤍", class:"btn-add-date" %>
+              </div>
             <% end %>
           </div>
         </div>
       </div>
+    </div>
     <% end %>
   </div>
 <% end %>
