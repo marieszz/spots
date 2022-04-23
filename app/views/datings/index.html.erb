@@ -7,26 +7,34 @@
   <p>Tu n'as pas encore fait de dates avec Spoots !</p>
   <%= link_to "Et si tu commençais?", new_dating_path, class:"btn btn-search-bar" %>
 <% else %>
-  <div class="dating-cards">
-    <% @datings.reverse.each_with_index do |dating, index| %>
-      <div class="dating-card">
-        <div class="dating-card-up">
-          <%= link_to dating_path(dating) do  %>
-            <%= @datings.count - index %>
-          <% end %>
+  <div class="container">
+    <div class="dating-cards">
+      <% @datings.reverse.each_with_index do |dating, index| %>
+        <div class="dating-card">
+          <div class="dating-card-up d-flex justify-content-center align-items-center">
+              <%= link_to dating_path(dating) do  %>
+                <%= @datings.count - index %>
+              <% end %>
+          </div>
+          <div class="mx-1">
+              <% if dating.participants.count == 1 %>
+                <p class="py-0 mb-0">Ton date n'est ou n'était pas sur Spoots</p>
+              <% elsif dating.participants.count == 2 %>
+                <p class="py-0 mb-0">Ton date avec
+                  <%= dating.participants.last.user.username.capitalize%>
+                  <br>
+                  <%= dating.preference %>
+                  <%= dating.price_range %>
+                  <%= dating.arrondissement %>
+                </p>
+              <% end %>
+          </div>
         </div>
-        <% if dating.participants.count == 1 %>
-          <p>Ton date n'est ou n'était pas sur Spoots</p>
-        <% elsif dating.participants.count == 2 %>
-          <p>Ton date avec
-            <%= dating.participants.last.user.username.capitalize%>
-          </p>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-  <p>Un nouveau date ?</p>
-  <div>
-    <%= link_to "Commence le ici", new_dating_path, class:"btn-search-bar" %>
+      <% end %>
+    </div>
+    <p>Un nouveau date ?</p>
+    <div>
+      <%= link_to "Commence le ici", new_dating_path, class:"btn-search-bar" %>
+    </div>
   </div>
 <% end %>
