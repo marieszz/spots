@@ -1,41 +1,43 @@
 // Specific CSS for your home-page
-body {
-  background-color: #FF5C3A;
-  .logo{
-    margin:7vh 10vh;
-    img{
-      width: 60VW;
-    }
+
+// .logo {
+//   margin:7vh 10vh;
+//   img {
+//     width: 60VW;
+//   }
+// }
+
+.homepage {
+  h1 {
+    font-size: 90px;
+    text-align: center;
+    font-weight: 500;
+    margin: 70px 0 50px;
   }
-  .description-home{
-    display: flex;
-    align-items: center;
-    margin: 0rem 1rem;
-    p{
-      // width: 50VW;
-      // font-size:48px;
-      color:white;
-      text-align: justify;
-    }
+
+  b, strong {
+    font-weight: bolder;
+    color: $orange;
   }
 }
 
+.description-home{
+  margin: 0rem 2rem;
+  p {
+    // width: 50VW;
+    // font-size:48px;
+    text-align: justify;
+    font-size: 1em;
+  }
+}
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .description-home{
-    p{
-      font-size:24px;
-    }
-  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .description-home{
-    p{
-      font-size:24px;
-    }
-  }
 }
 
 // Medium devices (tablets, 768px and up)
