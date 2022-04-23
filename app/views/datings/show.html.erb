@@ -1,1 +1,55 @@
-<%= "COUCOU" %>
+<div class="container">
+  <% if @suggestions.empty? %>
+    <h1>Désolé, nous n'avons rien à te proposer...</h1>
+  <% else %>
+    <h1>Voici nos meilleurs Spots pour ton date !</h1>
+  <% end %>
+
+  <% if @suggestions.empty? %>
+    <div>
+      <p>Tu peux soit compléter le formulaire à nouveau <%= link_to "ici", new_dating_path %></p>
+      <p>ou nous faire tes recommandations ici</p>
+    </div>
+  <% else %>
+    <div class="suggestions-container">
+      <div class="map">
+        <div style="width: 95%; height: 400px;"
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json%>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+
+      <% @suggestions.each do |suggestion| %>
+        <div class="bar">
+          <div class="bar-photo">
+            <%= cl_image_tag suggestion.bar.photo.key, height: 300, width: 400, crop: :fill %>
+          </div>
+          <div class="bar-infos-left">
+            <h3><%= suggestion.bar.name %></h3>
+            <p><%= suggestion.bar.address %></p>
+          </div>
+          <div class="bar-infos-right">
+            <p><%= suggestion.bar.rating %> ⭐️</p>
+
+            <div class="bar-drinks">
+              <% if suggestion.bar.beer == true %>
+                <p>🍻</p>
+              <% end %>
+              <% if suggestion.bar.wine == true %>
+                <p>🍷</p>
+              <% end %>
+              <% if suggestion.bar.cocktail == true %>
+                <p>🍹</p>
+              <% end %>
+              <% if suggestion.bar.soft == true %>
+                <p>🧃</p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  <% end %>
+</div>
