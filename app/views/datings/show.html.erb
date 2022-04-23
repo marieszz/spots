@@ -1,8 +1,14 @@
 <div class="container">
+  <%= link_to "Back", datings_path %>
   <% if @suggestions.empty? %>
     <h1>Désolé, nous n'avons rien à te proposer...</h1>
   <% else %>
-    <h1>Voici nos meilleurs Spots pour ton date !</h1>
+    <% if @participant.user == current_user %>
+      <h1>Voici nos meilleurs Spots pour ton date !</h1>
+      <h5>Ton date est sur Spoots ? <%= link_to "Invite-le !", new_dating_participant_path(@dating) %></h1>
+    <% else %>
+      <h1>Voici nos meilleurs Spots pour ton date avec <%= @participant.user.username.capitalize %>!</h1>
+    <% end %>
   <% end %>
 
   <% if @suggestions.empty? %>

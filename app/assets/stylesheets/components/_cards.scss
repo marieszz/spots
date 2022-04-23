@@ -123,3 +123,62 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+
+// dating index
+
+.dating-cards{
+  display: grid;
+  grid-gap: 16px;
+  margin-top: 3rem;
+  .dating-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .dating-card-up{
+      border-radius: 50%;
+      border: $orange 2px solid;
+      padding: 1rem;
+      color: $navy;
+      a{
+        color: $navy;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .dating-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .dating-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .dating-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .dating-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .dating-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
