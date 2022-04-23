@@ -1,6 +1,6 @@
-<%= render "shared/navbar" %>
-
-<h2>Rejoins Spoots !</h2>
+<div class="session-title">
+  <h2 class="text-center">Rejoins Spoots !</h2>
+</div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -50,8 +50,7 @@
     <%= f.button :submit, "Rejoins-nous !" %>
   </div>
 <% end %>
-  <div class="my-4 col d-flex align-items-center flex-column devise-shared-links">
+  <div class="my-4 col d-flex align-items-end flex-column devise-shared-links">
     <h6 class="mx-4 row">Déjà inscrit?</h6>
-    <%= render "devise/shared/links", class:"row" %>
+    <%= render "devise/shared/links", class:"row mx-4" %>
   </div>
-<%= render "shared/footer" %>

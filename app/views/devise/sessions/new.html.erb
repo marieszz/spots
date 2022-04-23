@@ -1,6 +1,6 @@
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
-      <h2 class="text-center">Prêt pour un nouveau date ?</h2>
+      <h2 class="text-center ">Prêt pour un nouveau date ?</h2>
     <div class="users-input">
       <%= f.input :email,
                   required: false,
@@ -16,6 +16,7 @@
     </div>
   </div>
 <% end %>
-<div class="my-4 col d-flex align-items-center flex-column devise-shared-links">
-  <%= render "devise/shared/links" %>
+<div class="my-4 col d-flex align-items-end flex-column devise-shared-links">
+    <%= link_to "Inscris-toi!", new_registration_path(resource_name) %>
+    <%= link_to "Mot de passe oublié?", new_password_path(resource_name) %>
 </div>
