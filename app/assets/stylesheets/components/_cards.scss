@@ -75,10 +75,17 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   .user-card{
-    background-color: #FFFFFF;
+    background-color: $navy;
     border-radius: 22px;
-    color: #ff5b3a;
+    color: $orange;
     text-align: center;
+    margin: 1rem 1rem;
+    img{
+      width: 100%;
+      padding: 0px;
+      object-fit: cover;
+      border-radius: 22px 0 0 22px;
+    }
   }
 }
 

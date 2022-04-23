@@ -1,12 +1,29 @@
-<% if @users.nil? %>
-  <%= "Find it" %>
-<% else %>
-  <% @users.each do |user| %>
-    <%= user.username %>
-    <%= simple_form_for [@dating, @new_participant] do |f|%>
-      <%= f.input :user_id, as: :hidden, input_html: {value: user.id}%>
-      <%= f.input :datng_id, as: :hidden, input_html: {value: @dating.id} %>
-      <%= button_tag type: 'submit' %>
+  <div class="text-center session-title">
+    <h3>Invite ton date</h3>
+    <h4>En appuyant sur 🧡</h4>
+  </div>
+
+  <div class="container user-cards">
+    <% if @users.nil? %>
+      <%= "Find it" %>
+    <% else %>
+      <% @users.each do |user| %>
+        <div class="row user-card">
+          <div class="col px-0">
+            <img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" alt="">
+          </div>
+          <div class="col py-2">
+            <%= user.username.capitalize %>
+            <div class="d-flex users-lists text-center justify-content-center">
+              <%= simple_form_for [@dating, @new_participant] do |f| %>
+                <%= f.input :user_id, as: :hidden, input_html: {value: user.id}%>
+                <%= f.input :datng_id, as: :hidden, input_html: {value: @dating.id} %>
+                <p class="text-center">Tu l'invites?</p>
+                <%= submit_tag "🧡", class:"btn-add-date" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <% end %>
     <% end %>
-  <% end %>
-<% end %>
+  </div>
