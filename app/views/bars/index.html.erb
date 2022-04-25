@@ -14,7 +14,9 @@
     <% @bars.each do |bar| %>
       <div class="bar">
         <div class="bar-photo">
-          <%= cl_image_tag bar.photo.key, crop: :fill %>
+          <% if bar.photo.attached? %>
+            <%= cl_image_tag bar.photo.key, crop: :fill %>
+          <% end %>
         </div>
         <div class="bar-infos">
           <div class="bar-infos-top">

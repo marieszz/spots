@@ -282,6 +282,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mail_form
+  nokogiri
   pg (~> 1.1)
   pry-byebug
   pry-rails

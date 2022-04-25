@@ -23,7 +23,9 @@
       <% @suggestions.each do |suggestion| %>
         <div class="bar">
           <div class="bar-photo">
-            <%= cl_image_tag suggestion.bar.photo.key, height: 300, width: 400, crop: :fill %>
+            <% if suggestion.bar.photo.attached? %>
+              <%= cl_image_tag suggestion.bar.photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
           </div>
           <div class="bar-infos-left">
             <h3><%= suggestion.bar.name %></h3>
