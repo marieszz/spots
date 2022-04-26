@@ -133,10 +133,16 @@
   margin: 3rem 0rem;
   .dating-card{
     display: flex;
-    border: black 1px solid;
+    border: white 1px solid;
     border-radius: 22px;
-    // flex-direction: column;
+    background-color: white;
     align-items: center;
+    padding: 3vh;
+    .date-name{
+      span{
+        color: $orange;
+      }
+    }
     .dating-card-up{
       border-radius: 50%;
       // border: $orange 2px solid;
@@ -150,6 +156,18 @@
         text-decoration: none;
       }
     }
+    .link-1{
+      a {
+        text-decoration: none;
+        color: $orange;
+      }
+    }
+    .link-2{
+      a {
+        text-decoration: none;
+        color: $navy;
+      }
+  }
   }
 }
 
