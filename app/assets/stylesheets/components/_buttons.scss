@@ -40,19 +40,28 @@
 }
 
 .see-suggestions {
-  border: 5px solid rgba(248, 194, 194, 0.66);
+  border: 5px solid $navy;
   border-radius: 22px;
-  background: #83dcb1;
+  background: $orange;
 
   &:hover{
     background-color:white;
     color: #FF5B3A;
     border-radius: 22px;
+    a{
+      color: #FF5B3A;
+    }
   }
   a{
-    color: #FF5B3A;
+    color: white;
     text-align: center;
-    padding:0.25rem 0.1rem;
+    padding: 0.375rem 0.75rem;
     text-decoration: none;
   }
+
+}
+
+.btn-add-date{
+  background: transparent;
+  border: none;
 }

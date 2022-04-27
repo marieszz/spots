@@ -5,17 +5,26 @@
   }
 }
 
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  img{
+    object-fit: cover;
+    padding: 1rem;
+  }
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   img{
-    width: 50%;
+    object-fit: cover;
+    padding: 1rem;
   }
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   img{
     width: 50%;
+    object-fit: cover;
   }
 }
 
@@ -23,6 +32,7 @@
 @media (min-width: 992px) {
   img{
     width: 50%;
+    object-fit: cover;
   }
 }
 
@@ -30,5 +40,6 @@
 @media (min-width: 1200px) {
   img{
     width: 50%;
+    object-fit: cover;
   }
 }

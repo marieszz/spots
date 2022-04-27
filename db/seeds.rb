@@ -1,4 +1,5 @@
 require "open-uri"
+require "nokogiri"
 
 p "Destroying suggestions"
 Suggestion.destroy_all
@@ -168,6 +169,52 @@ bars = bars_h.map.with_index do |bar, index|
   b.photo.attach(io: photo, filename: "bar#{index}.png", content_type: "image/png")
   b.save!
   b
+end
+
+html = URI.open("https://www.timeout.fr/paris/bar/100-meilleurs-bars").read
+doc = Nokogiri::HTML(html, nil, "utf-8")
+doc.search(".articleContent").each do |element|
+  bar = Bar.new
+  name = element.search("._h3_cuogz_1").text.strip.gsub(/\d*\.\W/, "").strip
+  bar.name = name
+  if element.search("._title_1p2xe_9 a").first.nil?
+    url = "no url"
+  else
+    url = element.search("._title_1p2xe_9 a").first.attribute("href").value.strip
+    html2 = URI.open(url).read
+    doc2 = Nokogiri::HTML(html2, nil, "utf-8")
+    doc2.search("._info_12yxf_35").each do |element|
+      address = "#{element.search("._list_1fhdc_5").first.text.strip.gsub("Adresse", "").gsub("Paris", ", ").gsub(/\d{2}e/, "").gsub("  "," ")} Paris"
+      bar.address = address
+    end
+    rating = doc2.search("._filled_k40fn_19").count / 2
+    bar.rating = rating
+    description = doc2.search("#content").text.strip
+    bar.description = description
+    (description.include?("cocktail") || description.include?("cocktails")) ? cocktail = true : cocktail = false
+    bar.cocktail = cocktail
+
+    (description.include?("bière") || description.include?("bières")) ? beer = true : beer = false
+
+    bar.beer = beer
+
+    (description.include?("vin") || description.include?("vins")) ? wine = true : wine = false
+
+    bar.wine = wine
+
+    if doc2.search("._filled_1wsig_15").count == 1
+      price_range = "€"
+    elsif doc2.search("._filled_1wsig_15").count == 2
+      price_range = "€€"
+    else
+      price_range = "€€€"
+    end
+
+    bar.price_range = price_range
+    bar.soft = true
+    bar.save
+    puts "bar saved"
+  end
 end
 
 p "bars created"

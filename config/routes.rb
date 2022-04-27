@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :suggestions, only: [ :index ]
   end
 
-  resources :bars, only: [ :index ]
+  resources :bars, only: [ :index, :show ]
 
   get "/startdating", to: "pages#startdating", as: "startdating"
   get "/storytime", to: "pages#storytime", as: "storytime"

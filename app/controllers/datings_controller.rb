@@ -6,7 +6,10 @@ class DatingsController < ApplicationController
   end
 
   def show
-    @participant = Participant.new
+    @new_participant = Participant.new
+    @dating = Dating.find(params[:id])
+    @suggestions = @dating.suggestions
+    @participant = @dating.participants.last
   end
 
   def new

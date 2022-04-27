@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_09_140608) do
+ActiveRecord::Schema.define(version: 2022_04_25_220514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2022_04_09_140608) do
     t.boolean "cocktail"
     t.boolean "soft"
     t.string "price_range"
+    t.text "description"
   end
 
   create_table "contacts", force: :cascade do |t|

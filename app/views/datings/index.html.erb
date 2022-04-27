@@ -1,10 +1,41 @@
-<h1>Tous tes dates</h1>
-
-<% @datings.each do |dating| %>
-  <%= dating.user.username %>
-<% end %>
-
-<p>Un nouveau date ?</p>
-<div class="see-suggestions">
-  <%= link_to "Commence le ici", new_dating_path, class:"" %>
+<div class="text-center session-title">
+  <h1>Tous tes dates</h1>
+  <h3>Tu as <%= @datings.count %> date(s) à ton actif</h3>
 </div>
+
+<% if @datings.empty? %>
+  <p>Tu n'as pas encore fait de dates avec Spoots !</p>
+  <%= link_to "Et si tu commençais?", new_dating_path, class:"btn btn-search-bar" %>
+<% else %>
+  <div class="container">
+    <div class="dating-cards">
+      <% @datings.reverse.each_with_index do |dating, index| %>
+        <div class="dating-card col flex-column text-center">
+          <div class="row">
+            <h3>Date numéro #<%= index + 1%></h3>
+          </div>
+          <div class="row">
+            <h4 class="date-name">Avec... <span><%= dating.participants.last.user.username.capitalize %></span></h4>
+          </div>
+          <div class="row">
+            <h5>Notre reco :</h5>
+          </div>
+          <div class="row">
+            <% if dating.bars.first.nil? %>
+              <h6>Désolées, nous n'avons rien trouvé...</h6>
+            <% else %>
+              <h5 class="link-1"><%= link_to dating.bars.first.name, bar_path(dating.bars.first) %>🔍</h5>
+            <% end %>
+          </div>
+          <div class="row">
+            <h5 class="link-2"><%= link_to "Nos autres suggestions 🔍", dating_path(dating) %></h5>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <p>Un nouveau date ?</p>
+    <div>
+      <%= link_to "Commence le ici", new_dating_path, class:"btn-search-bar" %>
+    </div>
+  </div>
+<% end %>
