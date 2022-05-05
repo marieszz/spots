@@ -6,18 +6,20 @@
   p {
     font-weight: bold;
   }
-
+  span{
+    color: $orange;
+  }
 }
 
 .footer-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-
+  color: $orange;
   img {
-    height: 9vh;
+    height: 100px;
+    width: 100px;
   }
-
   a {
     color: $white;
     font-size: 2.5em;
@@ -37,6 +39,9 @@
   a {
     text-decoration: none;
     color: $navy;
+    &:hover{
+      color: $orange;
+    }
   }
 }
 
@@ -50,6 +55,9 @@
   a {
     text-decoration: none;
     color: $navy;
+    &:hover{
+      color: $orange;
+    }
   }
 
   .social-medias {
