@@ -43,6 +43,26 @@
   }
 }
 
+.sign-in{
+  background-color:white;
+  color: #FF5B3A;
+  border-radius: 22px;
+  font-size: 1em;
+  align-items: center;
+  width: 8em;
+  a{
+    color: #FF5B3A;
+  }
+  &:hover{
+    border: 8px solid rgba(248, 194, 194, 0.66);
+    background-color: $orange;
+    color: $white;
+    a{
+      color: $white;
+    }
+  }
+}
+
 .see-suggestions {
   border: 5px solid $navy;
   border-radius: 22px;
