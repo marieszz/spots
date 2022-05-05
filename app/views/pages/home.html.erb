@@ -10,7 +10,7 @@
       <p>Pour ne plus galérer à trouver un bar sympa pour un premier date 🤯</p>
       <p>Notre algorithme te trouve les <strong>5 meilleurs lieux</strong> en fonction de tes préférences à toi et à ton date !</p>
     </div>
-    <div class="d-flex cards-home justify-content-end align-items-center">
+    <div class="d-flex justify-content-end align-items-center flex-column">
       <div class="main-btn">
         <div>
           <% unless user_signed_in?  %>
@@ -20,6 +20,9 @@
           <% end %>
         </div>
       </div>
+      <% unless user_signed_in? %>
+        <p>Déjà inscrit ? <%= link_to "Connecte-toi ☑️!", new_user_session_path %></p>
+      <% end %>
     </div>
   </div>
 </div>
