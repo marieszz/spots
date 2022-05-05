@@ -14,9 +14,9 @@
       <div class="main-btn">
         <div>
           <% unless user_signed_in?  %>
-            <%= link_to "Rejoins-nous ! ✨", startdating_path, class:"sign-up"%>
+            <%= link_to "Rejoins-nous ! ✨", startdating_path%>
           <% else %>
-            <%= link_to "Trouve ton Spot ! ✨", new_dating_path, class:"new-dating" %>
+            <%= link_to "Trouve ton Spot ! ✨", new_dating_path %>
           <% end %>
         </div>
       </div>
