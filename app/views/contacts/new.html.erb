@@ -12,22 +12,23 @@
   </div>
   <div class="contact-form">
     <%= simple_form_for @contact do |f| %>
-      <div class="form-grid row justify-content-evenly">
+      <div class="form-grid">
         <div class="input-small">
-          <%= f.input :name, label: "Ton prénom", placeholder: "Marie, Myriam, Lucas,...", class: 'input-small' %>
+          <%= f.label :name, "Ton prénom" %>
+          <%= f.text_field :name, placeholder: "Marie, Myriam, Lucas,...", class: 'input-small' %>
         </div>
         <div class="input-small">
-          <%= f.input :email, label: "Ton mail pour qu'on puisse te répondre", placeholder: "lola@gmail.com", class: 'col input-small' %>
+          <%= f.label :email, "Ton adresse e-mail" %>
+          <%= f.email_field :email, placeholder: "lola@gmail.com", class: 'col input-small', autocomplete:  "email"%>
         </div>
       </div>
       <div class="email-message">
-        <%= f.input :message, placeholder: "Dis-nous tout", class:"email-message" %>
+        <%= f.label :message, "Dis-nous tout" %>
+        <%= f.text_field :message, class:"email-message" %>
       </div>
       <div class="d-flex justify-content-center">
-        <%= f.button :submit, "Envoyé!", class:"send-email" %>
+        <%= f.button :submit, "Envoyé 💌!", class:"send-email" %>
       </div>
     <% end %>
   </div>
 </div>
-
-<%# https://medium.com/@Gabriel.Valle/rails-and-mail-form-f4bc4f991c83 %>

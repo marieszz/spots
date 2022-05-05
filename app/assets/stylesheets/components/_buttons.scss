@@ -33,9 +33,13 @@
   width: 8em;
   color: $white;
   font-size: 1.5em;
-
-  .send-email:hover {
-    opacity: 0.7;
+  &:hover{
+    background-color:white;
+    color: #FF5B3A;
+    border-radius: 22px;
+    a{
+      color: #FF5B3A;
+    }
   }
 }
 

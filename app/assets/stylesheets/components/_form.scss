@@ -2,19 +2,41 @@
   display: grid;
   grid-gap: 16px;
   padding: 3rem 2rem;
-  .form-grid{
-    display: grid;
-    grid-gap: 16px;
-  }
   .contact-intro{
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+    h3{
+      color: $orange;
+    }
+  }
+  .form-grid, .email-message{
+    width: 70%;
+    margin: auto;
+    input{
+      margin-bottom: 10px;
+      border: 0.5px white solid;
+      border-radius: 15px;
+      background: #f7f7f7;
+      padding: 10px;
+    }
+    .input-small{
+      display: flex;
+      flex-direction: column;
+    }
+    label{
+      margin-bottom: 10px;
+    }
   }
   .email-message{
     input{
       height: 20vh;
+      width: 100%;
     }
   }
-}
+
 
 
 // Smallest device
@@ -32,9 +54,6 @@
   .form{
     width: 100%;
     grid-template-columns: 1fr;
-    .form-grid {
-      grid-template-columns: 1fr
-    }
   }
 }
 // Medium devices (tablets, 768px and up)
@@ -42,9 +61,6 @@
   .form{
     width: 100%;
     grid-template-columns: 1fr;
-    .form-grid {
-      grid-template-columns: 1fr
-    }
   }
 }
 
@@ -54,13 +70,6 @@
     width: 100%;
     margin: auto;
     grid-template-columns: 1fr 1fr;
-    // .contact-intro{
-    //   display: flex;
-    //   align-items: center;
-    // }
-    .form-grid {
-      grid-template-columns: 1fr 1fr;
-    }
   }
 }
 
@@ -70,9 +79,7 @@
     width: 100%;
     // margin: auto;
     grid-template-columns: 1fr 1fr;
-    .form-grid {
-      grid-template-columns: 1fr 1fr;
-    }
+
   }
 }
 

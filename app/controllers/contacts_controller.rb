@@ -1,20 +1,17 @@
 class ContactsController < ApplicationController
+  skip_before_action :authenticate_user!
   def new
-    @contact = Contact.new()
+    @contact = Contact.new
   end
 
   def create
     @contact = Contact.new(contact_params)
-      if @contact.deliver
-        render json: {message: "Email sent successfully"}
-      else
-        if @contact.name.nil?
-          redirect_to new_contact_path, alert: "Il manque ton nom !"
-        elsif @contact.email.nil?
-          redirect_to new_contact_path, alert:"Ton mail n'a pas pu être envoyé, il manque ton email !"
-        end
-      end
-
+    if @contact.save
+      ContactMailer.contact_mail(@contact).deliver
+      redirect_to root_path, notice: "Mail envoyé, on te répond vite!"
+    else
+      render :new, alert: "Ton mail n'a pas été envoyé... Réessaie !"
+    end
   end
 
   private
