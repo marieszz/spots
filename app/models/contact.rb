@@ -1,7 +1,7 @@
 class Contact < MailForm::Base
   attribute :name, validate: true
   attribute :email, validate: /\A[^@\s]+@[^@\s]+\z/i
-  attribute :message
+  attribute :message, validate: true
   def headers
     {
       #this is the subject for the email generated, it can be anything you want
