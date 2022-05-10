@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  resources :datings_steps
 
   resources :users, only: [ :index ]
 
