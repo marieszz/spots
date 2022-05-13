@@ -4,8 +4,10 @@
 </div>
 
 <% if @datings.empty? %>
-  <p>Tu n'as pas encore fait de dates avec Spoots !</p>
-  <%= link_to "Et si tu commençais?", new_dating_path, class:"btn btn-search-bar" %>
+  <div class="datings-empty">
+    <p>Tu n'as pas encore fait de dates avec Spoots !</p>
+    <%= link_to "Et si tu commençais?", new_dating_path, class:"btn btn-search-bar" %>
+  </div>
 <% else %>
   <div class="container">
     <div class="dating-cards">
