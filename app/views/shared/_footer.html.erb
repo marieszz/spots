@@ -1,13 +1,13 @@
 <div class="footer">
-  <div class="footer-top">
+  <div class="container footer-top">
     <div class="logo-footer">
-      <%= image_tag "spots-logo-big.png" %>
+      <%= image_tag "spots-logo.png" %>
     </div>
     <p>Spots, pour toi, pour vous, pour nous.</p>
   </div>
-  <div class="footer-description">
+  <div class="container footer-description">
     <div>
-      <h5>Derrière Spoots</h5>
+      <h5>Derrière <span>Spoots</span></h5>
     </div>
     <div class="d-flex flex-column">
       <%= link_to "La petite histoire de l'app", storytime_path %>
@@ -15,9 +15,9 @@
       <%= link_to "Contact", new_contact_path %>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="container footer-bottom">
     <div class="social-medias">
-      <h5>On se retrouve ailleurs ?</h5>
+      <h5>On se retrouve <span>ailleurs</span> ?</h5>
       <div class="">
         <%= link_to comingsoon_path do %>
           <i class="fa-brands fa-instagram-square mx-2"></i>

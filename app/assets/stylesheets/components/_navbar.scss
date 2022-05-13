@@ -8,27 +8,24 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100px;
 }
 
 .nav-item{
-  .sign-in-navbar{
-    background: linear-gradient(107.86deg, #FD267A 46%, #FF6036 97.84%);
-    border: 5px solid #F8C2C2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 22px;
-    padding: 0.5rem;
-  }
   a{
     text-decoration: none;
-    color: #FD267A;
-    font-weight: bold;
   }
-  a:hover{
-    color:#FF5C3A;
-  }
-  #navbarDropdown{
-    border: 1px white solid;
-    border: 22px;
+
+ .dropdown-menu{
+    border: 1px #f7f7f7 solid;
+    border-radius: 22px;
+    box-shadow: 0 3px 10px rgba(247, 247, 247 , 247/50%);
+    a{
+      color: $orange;
+      &:hover{
+        background-color: $navy;
+        color: $white;
+      }
+    }
   }
 }
