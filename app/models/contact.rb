@@ -1,6 +1,7 @@
-class Contact < MailForm::Base
+class Contact < ApplicationRecord
   attribute :name, validate: true
   attribute :email, validate: /\A[^@\s]+@[^@\s]+\z/i
+
   attribute :message, validate: true
   def headers
     {
@@ -11,4 +12,5 @@ class Contact < MailForm::Base
       #the from will display the name entered by the user followed by the email
     }
   end
+
 end

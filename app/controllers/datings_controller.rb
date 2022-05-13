@@ -1,15 +1,20 @@
 class DatingsController < ApplicationController
   def index
-    @datings = Dating.all
+    @datings = Participant.where(user: @user).map(&:dating)
     @dating = Dating.new
     @user = current_user
   end
 
   def show
-    @new_participant = Participant.new
     @dating = Dating.find(params[:id])
-    @suggestions = @dating.suggestions
-    @participant = @dating.participants.last
+    @participants = @dating.participants
+    @participant = @participants.find_by(user: current_user)
+    if @participant.nil?
+      redirect_to datings_path, alert: "tu n'es pas participant de ce date !"
+    else
+      @new_participant = Participant.new
+      @suggestions = @dating.suggestions
+    end
   end
 
   def new

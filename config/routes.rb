@@ -14,9 +14,7 @@ Rails.application.routes.draw do
   get "/startdating", to: "pages#startdating", as: "startdating"
   get "/storytime", to: "pages#storytime", as: "storytime"
   get "/about-us", to: "pages#aboutus", as: "aboutus"
-  get "/contact-us", to: "pages#contactus", as: "contactus"
   get "/comingsoon", to: "pages#comingsoon", as: "comingsoon"
 
   resources :contacts, only: [ :new, :create ]
-
 end

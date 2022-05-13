@@ -3,25 +3,25 @@
   border: 8px solid rgba(248, 194, 194, 0.66);
   border-radius: 22px;
   margin: 1rem 3rem;
+  font-size: 1.5em;
+  a{
+    text-decoration: none;
+    color: $white;
+  }
+  font-weight: bold;
+  &:hover{
+    background-color:white;
+    color: #FF5B3A;
+    border-radius: 22px;
+    a{
+      color: #FF5B3A;
+    }
+  }
 
   div {
     margin: 0.5rem 1rem;
     text-align: center;
     color: $white;
-
-    .sign-up {
-      text-decoration: none;
-      color:$white;
-      font-weight: bold;
-      font-size: 1.5em;
-    }
-
-    .new-dating {
-      font-size: 1.5em;
-      text-decoration: none;
-      color:white;
-      font-weight: bold;
-    }
   }
 }
 
@@ -33,9 +33,33 @@
   width: 8em;
   color: $white;
   font-size: 1.5em;
+  &:hover{
+    background-color:white;
+    color: #FF5B3A;
+    border-radius: 22px;
+    a{
+      color: #FF5B3A;
+    }
+  }
+}
 
-  .send-email:hover {
-    opacity: 0.7;
+.sign-in{
+  background-color:white;
+  color: #FF5B3A;
+  border-radius: 22px;
+  font-size: 1em;
+  align-items: center;
+  width: 8em;
+  a{
+    color: #FF5B3A;
+  }
+  &:hover{
+    border: 8px solid rgba(248, 194, 194, 0.66);
+    background-color: $orange;
+    color: $white;
+    a{
+      color: $white;
+    }
   }
 }
 

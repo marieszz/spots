@@ -69,4 +69,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mail_form'
 gem "dotenv-rails", groups: [:development, :test]
 gem "nokogiri"
-#test

@@ -1,0 +1,13 @@
+.datings-empty {
+  text-align: center;
+  margin-top: 5vh;
+  a{
+    border-radius: 22px;
+    color: $orange;
+    &:hover{
+      color:white;
+      background-color: $navy;
+      border-radius: 22px;
+    }
+  }
+}
