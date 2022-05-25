@@ -1,6 +1,7 @@
 class DatingsController < ApplicationController
   def index
-    @datings = Participant.where(user: @user).map(&:dating)
+    @participant = Participant.where(user: @user).map(&:dating)
+    @datings = Dating.includes(:participants)
     @dating = Dating.new
     @user = current_user
   end
