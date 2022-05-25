@@ -12,10 +12,10 @@ export default class extends Controller {
     second = inputs.item(5)
     third = inputs.item(6)
     fourth = inputs.item(7);
-    first.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653481179/Sans_titre_4_1_flvhco.png')"
-    second.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653481179/Sans_titre_5_1_cbwvp9.png')"
-    third.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653481179/Sans_titre_6_1_c0wl1y.png')"
-    fourth.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653481179/Sans_titre_7_1_ihjuzk.png')"
+    first.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653506298/Capture_d_e%CC%81cran_2022-05-25_a%CC%80_20.14.46_hjhutz.png')"
+    second.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653506298/Capture_d_e%CC%81cran_2022-05-25_a%CC%80_20.14.22_date4u.png')"
+    third.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653506298/Capture_d_e%CC%81cran_2022-05-25_a%CC%80_20.15.16_oyax25.png')"
+    fourth.style.backgroundImage = "url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653506298/Capture_d_e%CC%81cran_2022-05-25_a%CC%80_20.16.06_egikny.png')"
     console.log(fourth.value)
   }
 }

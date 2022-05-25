@@ -9,8 +9,7 @@
         <%= f.input :preference, collection: Dating::PREFERENCES, as: :radio_buttons %>
          <p>Ton porte-monnaie est dans quel mood ?* (Une réponse uniquement)</p>
         <%= f.input :price_range, collection: Dating::PRICE_RANGES, as: :radio_buttons %>
-        <p>Ton arrondissement de prédiléction ?*</p>
-        <%= f.input :arrondissement, as: :select, collection: Dating::ARRONDISSEMENTS %>
+        <%= f.input :arrondissement, as: :select, collection: Dating::ARRONDISSEMENTS, label: "Ton arrondissement de prédiléction ?" %>
       </div>
       <div class="d-flex justify-content-end">
         <%= f.button :submit, "Suivant 👉", class:"send-email"  %>

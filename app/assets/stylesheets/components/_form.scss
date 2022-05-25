@@ -109,24 +109,26 @@
       border: none;
       width: 100px;
       height: 100px;
-      border-radius: 0% !important;
+      border-radius: 5px !important;
+      margin-right: 10px;
       &:checked{
-        border: #83dcb1 10px solid;
+        border: $navy 5px solid;
         background-color: #FFFFFF;
+
       }
     }
 
     #dating_preference_bière{
-      background-image: url('https://cdn-icons-png.flaticon.com/512/931/931898.png');
+      background-image: url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653504195/beer_ccw5hs.png');
     }
     #dating_preference_vin{
-      background-image: url('https://cdn-icons-png.flaticon.com/512/65/65667.png');
+      background-image: url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653504193/glass-with-wine_wqvvqh.png');
     }
     #dating_preference_cocktail{
-      background-image: url('https://cdn-icons.flaticon.com/png/512/2371/premium/2371399.png?token=exp=1653488779~hmac=7c910b5ec266f059fbea5044675ade23');
+      background-image: url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653504192/cocktail_mwtgjj.png');
     }
     #dating_preference_soft{
-      background-image: url('https://cdn-icons-png.flaticon.com/512/3500/3500349.png');
+      background-image: url('https://res.cloudinary.com/de3m2ax5t/image/upload/v1653504191/softdrink_giwcqv.png');
     }
   }
 
@@ -138,9 +140,9 @@
       border: none;
       margin-right: 50px;
       margin-bottom: 50px;
-      border-radius: 0% !important;
+      border-radius: 5px !important;
       &:checked{
-        border: #83dcb1 10px solid;
+        border: $navy 5px solid;
         background-color: #FFFFFF;
       }
     }
@@ -149,7 +151,7 @@
 }
 
 .invalid-feedback{
-  color: #83dcb1;
+  color: $navy;
 }
 
 // Smallest device
