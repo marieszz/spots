@@ -87,9 +87,63 @@
 
 .new-form-dating{
   margin: auto;
+  display: flex;
+  img{
+    width: 100px;
+    height: 100px;
+  }
   .form-label {
     text-align: center;
   }
+  legend{
+    display: none;
+  }
+  .dating_preference, .dating_price_range{
+    display: flex;
+    label{
+      display: none;
+    }
+  }
+  .dating_preference{
+    #dating_preference_bière, #dating_preference_vin, #dating_preference_cocktail, #dating_preference_soft{
+      border: none;
+      width: 100px;
+      height: 100px;
+      &:checked{
+        border: #83dcb1 10px solid;
+        background-color: #FFFFFF;
+      }
+    }
+
+    #dating_preference_bière{
+      background-image: url('https://cdn-icons-png.flaticon.com/512/931/931898.png');
+    }
+    #dating_preference_vin{
+      background-image: url('https://cdn-icons-png.flaticon.com/512/65/65667.png');
+    }
+    #dating_preference_cocktail{
+      background-image: ('https://cdn-icons-png.flaticon.com/512/3076/3076079.png');
+    }
+    #dating_preference_soft{
+      background-image: url('https://cdn-icons-png.flaticon.com/512/3500/3500349.png');
+    }
+  }
+
+  .dating_price_range{
+    flex-wrap: wrap;
+    .form-check-input {
+      width: 300px;
+      height: 100px;
+      border: none;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      &:checked{
+        border: #83dcb1 10px solid;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+
 }
 
 .invalid-feedback{
