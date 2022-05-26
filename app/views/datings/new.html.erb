@@ -1,10 +1,10 @@
-<div class="container">
+<div class="">
   <div class="date-title">
     <h1>Comment tu l'imagines, ton date ?</h1>
   </div>
   <div class="new-form-dating" data-controller="input">
     <%= simple_form_for(@dating) do |f| %>
-      <div class="d-flex justify-content-center flex-column">
+      <div class="text-center d-flex flex-column justify-content-center">
         <p>Tu es plus dans un mood...* (Une réponse uniquement)</p>
         <%= f.input :preference, collection: Dating::PREFERENCES, as: :radio_buttons %>
          <p>Ton porte-monnaie est dans quel mood ?* (Une réponse uniquement)</p>
