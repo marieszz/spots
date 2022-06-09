@@ -1,16 +1,21 @@
-$orange:#FF5C3A;
-$navy : #192637;
-.session-title{
-  color:$orange;
+.new-registration {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 6rem;
+
+  .btn {
+    color: white;
+    font-weight: bold;
+  }
 }
 
-.users-input{
+.users-input {
   display: grid;
   grid-gap: 16px;
   padding: 0rem 1rem;
-  width: 70%;
-  margin: auto;
-  label{
+  width: 100%;
+
+  label {
     font-size: 14px;
   }
   .form-text {
@@ -19,64 +24,39 @@ $navy : #192637;
   }
 }
 
-.users-agreement{
+.users-agreement {
   padding: 0rem 1rem;
   align-items: center;
-  label{
+  label {
     font-size:14px;
     margin-left:1rem;
   }
 }
-.checkbox-description{
-  p{
+
+.checkbox-description {
+  p {
     font-size: 14px;
     padding: 0rem 1rem;
   }
 }
 
-.gender-input{
+.gender-input {
   padding: 0rem 1rem;
-  width: 70%;
-  margin:auto;
-  label{
+  width: 100%;
+  label {
     font-size:14px;
   }
 }
 
-.form-actions{
-  .btn{
-    color: $orange;
-    border: $orange 3px solid;
-    border-radius: 22px;
-  }
-  .btn:hover{
-    background-color: $navy;
-    border: $orange 3px solid;
-    color: white;
-    border-radius:22px
-  }
-  // input{
-  //   color:white;
-  //   border: white 1px solid;
-  //   border-radius: 22Px;
-  // }
-  // input:hover{
-  //   background-color: white;
-  //   color: #FF5C3A;
-  //   border: none;
-  //   border-radius: 22Px;
-  // }
-}
-
 .devise-shared-links{
-  a{
+  a {
     text-decoration: none;
     color: $orange;
     border-radius: 22Px;
     border: white 3px solid;
     padding: 0.375rem 0.75rem;
   }
-  a:hover{
+  a:hover {
     border: $orange 3px solid;
     background-color: white;
     color: #FF5C3A;

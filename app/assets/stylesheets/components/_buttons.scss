@@ -1,19 +1,21 @@
 .main-btn {
   background: $orange;
   border: 8px solid rgba(248, 194, 194, 0.66);
-  border-radius: 22px;
-  margin: 1rem 3rem;
+  border-radius: 50px;
+  margin: 2rem 0;
   font-size: 1.5em;
-  a{
+  width: 300px;
+
+  a {
     text-decoration: none;
     color: $white;
   }
   font-weight: bold;
-  &:hover{
+  &:hover {
     background-color:white;
     color: #FF5B3A;
-    border-radius: 22px;
-    a{
+
+    a {
       color: #FF5B3A;
     }
   }
@@ -25,7 +27,7 @@
   }
 }
 
-.send-email{
+.send-email {
   background: $orange;
   border: 8px solid rgba(248, 194, 194, 0.66);
   border-radius: 22px;
@@ -33,7 +35,8 @@
   width: 8em;
   color: $white;
   font-size: 1.5em;
-  &:hover{
+
+  &:hover {
     background-color:white;
     color: #FF5B3A;
     border-radius: 22px;
@@ -43,21 +46,23 @@
   }
 }
 
-.sign-in{
+.sign-in {
   background-color:white;
   color: #FF5B3A;
   border-radius: 22px;
   font-size: 1em;
   align-items: center;
   width: 8em;
-  a{
+
+  a {
     color: #FF5B3A;
   }
-  &:hover{
+
+  &:hover {
     border: 8px solid rgba(248, 194, 194, 0.66);
     background-color: $orange;
     color: $white;
-    a{
+    a {
       color: $white;
     }
   }

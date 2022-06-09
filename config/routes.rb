@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :bars, only: [ :index, :show ]
 
-  get "/startdating", to: "pages#startdating", as: "startdating"
+  # get "/startdating", to: "pages#startdating", as: "startdating"
   get "/storytime", to: "pages#storytime", as: "storytime"
   get "/about-us", to: "pages#aboutus", as: "aboutus"
   get "/comingsoon", to: "pages#comingsoon", as: "comingsoon"
