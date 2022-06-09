@@ -1,9 +1,9 @@
 <div class="text-center session-title">
   <h1>Tous tes dates</h1>
-  <h3>Tu as <%= @datings.count %> date(s) à ton actif</h3>
+  <h3>Tu as <%= pluralize(@user.datings.count, "date", "dates") %> à ton actif</h3>
 </div>
 
-<% if @datings.empty? %>
+<% if @user.datings.empty? %>
   <div class="datings-empty">
     <p>Tu n'as pas encore fait de dates avec Spoots !</p>
     <%= link_to "Et si tu commençais?", new_dating_path, class:"btn btn-search-bar" %>
@@ -11,7 +11,7 @@
 <% else %>
   <div class="container">
     <div class="dating-cards">
-      <% @datings.reverse.each_with_index do |dating, index| %>
+      <% @user.datings.reverse.each_with_index do |dating, index| %>
         <div class="dating-card col flex-column text-center">
           <div class="row">
             <h3>Date numéro #<%= index + 1%></h3>
