@@ -17,13 +17,15 @@ users_h = [
     email: "myriam@gmail.com",
     password: "myriam",
     username: "mymy",
-    gender: "Féminin"
+    gender: "Féminin",
+    admin: true
   },
   {
     email: "marie@gmail.com",
     password: "maries",
     username: "marieszz",
-    gender: "Féminin"
+    gender: "Féminin",
+    admin: true
   },
   {
     email: "arthur@gmail.com",

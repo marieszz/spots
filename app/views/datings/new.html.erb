@@ -1,13 +1,15 @@
-<div class="container">
+<div class="">
   <div class="date-title">
     <h1>Comment tu l'imagines, ton date ?</h1>
   </div>
-  <div class="new-form-dating">
+  <div class="new-form-dating" data-controller="input">
     <%= simple_form_for(@dating) do |f| %>
-      <div class="d-flex justify-content-center flex-column">
-        <%= f.input :preference, as: :select, collection: Dating::PREFERENCES, label:"Tu es plus dans un mood..." %>
-        <%= f.input :price_range, as: :select, collection: Dating::PRICE_RANGES, label:"Ton porte-monnaie est dans quel mood ?" %>
-        <%= f.input :arrondissement, as: :select, collection: Dating::ARRONDISSEMENTS, label:"Ton arrondissement de prédiléction ?" %>
+      <div class="text-center d-flex flex-column justify-content-center">
+        <p>Tu es plus dans un mood...* (Une réponse uniquement)</p>
+        <%= f.input :preference, collection: Dating::PREFERENCES, as: :radio_buttons %>
+         <p>Ton porte-monnaie est dans quel mood ?* (Une réponse uniquement)</p>
+        <%= f.input :price_range, collection: Dating::PRICE_RANGES, as: :radio_buttons %>
+        <%= f.input :arrondissement, as: :select, collection: Dating::ARRONDISSEMENTS, label: "Ton arrondissement de prédiléction ?" %>
       </div>
       <div class="d-flex justify-content-end">
         <%= f.button :submit, "Suivant 👉", class:"send-email"  %>

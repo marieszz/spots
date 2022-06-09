@@ -1,4 +1,5 @@
 <div class="text-center session-title">
+  <h4>Hello <%= current_user.username.capitalize %> !</h4>
   <h1>Tous tes dates</h1>
   <h3>Tu as <%= @datings.count %> date(s) à ton actif</h3>
 </div>
@@ -17,7 +18,11 @@
             <h3>Date numéro #<%= index + 1%></h3>
           </div>
           <div class="row">
-            <h4 class="date-name">Avec... <span><%= dating.participants.last.user.username.capitalize %></span></h4>
+            <% if dating.participants.count == 2 %>
+              <h4 class="date-name">Avec... <span><%= dating.participants.where.not(user: current_user).first.user.username.capitalize %></span></h4>
+            <% else %>
+              <h5><%= link_to "Trouve ton date !", new_dating_participant_path(dating) %> 👈</h4>
+            <% end %>
           </div>
           <div class="row">
             <h5>Notre reco :</h5>
