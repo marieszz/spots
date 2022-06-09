@@ -9,9 +9,9 @@
 
 .homepage {
   h1 {
-    font-size: 90px;
+    font-size: 80px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     margin: 70px 0 50px;
   }
 
@@ -22,18 +22,52 @@
 }
 
 .cards-home{
-  .description-home{
+  .description-home {
     margin: 0rem 2rem;
     p {
       text-align: justify;
       font-size: 1em;
+      margin-top: 10px;
+      margin-bottom: 0;
     }
+
+    h1 {
+    font-size: 60px;
+    text-align: left;
+    font-weight: 600;
+    margin: 70px 0 50px;
+    }
+  }
+}
+
+.img-app {
+  text-align: center;
+  img {
+    width: 100%;
   }
 }
 
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
+  .img-app {
+    grid-row: 1;
+  }
+
+  .cards-home{
+    .description-home {
+      h1 {
+      text-align: center;
+      font-size: 45px;
+      }
+    }
+  }
+
+  #already-signup {
+    p {
+      text-align: center;
+    }
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -59,4 +93,9 @@
   .cards-home {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+#already-signup a {
+  color: #FF5C3A;
+  text-decoration: none;
 }

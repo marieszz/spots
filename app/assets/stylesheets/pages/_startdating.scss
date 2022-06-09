@@ -1,6 +1,8 @@
 body {
   background-color: white;
-  .introduction{
+  .introduction {
+    margin-top: 100px;
+
     h1{
       text-align: center;
       font-weight: bold;
@@ -12,25 +14,26 @@ body {
       font-weight: lighter;
     }
   }
-  .interested{
+
+  .interested {
     margin: 3rem 1rem 1rem;
   }
 
-  .dating-new{
-    background: $orange;
-    border: 15px solid rgba(248, 194, 194, 0.66);
-    border-radius: 22px;
-    font-size: 30px;
-    text-decoration: none;
-    color:white;
-    font-weight: bold;
-    text-align: center;
-    a{
-      margin: 0.5rem;
-      text-decoration: none;
-      color: white;
-    }
-  }
+  // .dating-new {
+  //   background: $orange;
+  //   border: 15px solid rgba(248, 194, 194, 0.66);
+  //   border-radius: 22px;
+  //   font-size: 30px;
+  //   text-decoration: none;
+  //   color:white;
+  //   font-weight: bold;
+  //   text-align: center;
+  //   a{
+  //     margin: 0.5rem;
+  //     text-decoration: none;
+  //     color: white;
+  //   }
+  // }
 }
 
 // Smallest device

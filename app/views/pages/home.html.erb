@@ -2,27 +2,34 @@
   <div class="logo">
     <%#= image_tag "logo.png", alt:"spots-logo" %>
   </div>
-  <h1>Spoots</h1>
+  <h1>SPOOTS</h1>
 
   <div class="cards-home">
     <div class="description-home">
+      <h1>Datez mieux</h1>
       <p>Spoots a été fait pour toi, pour vous, pour nous.</p>
-      <p>Pour ne plus galérer à trouver un bar sympa pour un premier date 🤯</p>
-      <p>Notre algorithme te trouve les <strong>5 meilleurs lieux</strong> en fonction de tes préférences à toi et à ton date !</p>
-    </div>
-    <div class="d-flex justify-content-end align-items-center flex-column">
-      <div class="main-btn">
-        <div>
-          <% unless user_signed_in?  %>
-            <%= link_to "Rejoins-nous ! ✨", startdating_path%>
-          <% else %>
-            <%= link_to "Trouve ton Spot ! ✨", new_dating_path %>
+      <p>Pour ne plus galérer à trouver un bar sympa pour un premier date. 🤯</p>
+      <p>Notre algorithme te trouve les <strong>5 meilleurs lieux pour ton date</strong> en fonction de tes préférences à toi et à ton date !</p>
+
+      <div class="d-flex justify-content-end flex-column">
+        <div class="main-btn">
+          <div>
+            <% unless user_signed_in?  %>
+              <%= link_to "Rejoins-nous ! ✨", new_user_registration_path%>
+            <% else %>
+              <%= link_to "Trouve ton Spot ! ✨", new_dating_path %>
+            <% end %>
+          </div>
+        </div>
+        <div id="already-signup">
+          <% unless user_signed_in? %>
+            <p>Déjà inscrit ? <%= link_to "Connecte-toi ! ☑️", new_user_session_path %></p>
           <% end %>
         </div>
       </div>
-      <% unless user_signed_in? %>
-        <p>Déjà inscrit ? <%= link_to "Connecte-toi ☑️!", new_user_session_path %></p>
-      <% end %>
+    </div>
+    <div class="img-app">
+    <img src="https://memorizer.ai/wp-content/uploads/2022/05/Group-1346.png" alt="">
     </div>
   </div>
 </div>
